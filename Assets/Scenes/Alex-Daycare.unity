@@ -174,10 +174,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8890001328527935760, guid: a1fce385cc5f08a43ba2903535b8154e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1133124710}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fce385cc5f08a43ba2903535b8154e, type: 3}
 --- !u!1001 &151290992
 PrefabInstance:
@@ -534,6 +531,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   TimeRemaining: 0
   gameOverManager: {fileID: 0}
+  score: {fileID: 0}
 --- !u!4 &856848700
 Transform:
   m_ObjectHideFlags: 0
@@ -682,28 +680,6 @@ BoxCollider2D:
   m_AutoTiling: 1
   m_Size: {x: 10, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1133124705 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8890001328527935760, guid: a1fce385cc5f08a43ba2903535b8154e, type: 3}
-  m_PrefabInstance: {fileID: 114337530}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1133124710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133124705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 785a6292175bb2747964a800247dc79f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InteractableDistance: 1
-  HoverText: {fileID: 0}
-  OnInteract:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1001 &1196807663
 PrefabInstance:
   m_ObjectHideFlags: 0

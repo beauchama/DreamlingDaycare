@@ -16,6 +16,8 @@ namespace Dreamlings.Characters
 
         public NeededFood NeededFood { get; set; }
 
+        public int Score => Quality * 100;
+
         public bool CanBreed()
         {
             return !(HasIllness || IsInjured)

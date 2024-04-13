@@ -20,6 +20,8 @@ public class DreamlingCharacter : MonoBehaviour
     public Sprite[] Sprites;
     public GameObject Baby;
 
+    public int Score => dreamling.Score;
+
     // Start is called before the first frame update
     void Start()
     {
