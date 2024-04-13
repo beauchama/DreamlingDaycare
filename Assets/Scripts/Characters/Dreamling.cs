@@ -5,9 +5,9 @@ namespace Dreamlings.Characters
 {
     public class Dreamling
     {
-        public string Name { get; set; }
+        public string Name { get; set; } = "Rooo!";
 
-        public int Quality { get; set; }
+        public int Quality { get; set; } = 1;
 
         public bool HasIllness { get; set; }
 
