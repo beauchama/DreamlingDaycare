@@ -1,5 +1,6 @@
 using Dreamlings.Interfaces;
-using System;
+using Dreamlings.Tools;
+using UnityEngine;
 
 namespace Dreamlings.Characters
 {
@@ -21,31 +22,16 @@ namespace Dreamlings.Characters
             && GameManager.Instance.Inventory.HasFood(NeededFood);
         }
 
-        public Dreamling Breed(Dreamling dreamling)
+        public Dreamling Breed()
         {
             GameManager.Instance.Inventory.RemoveFood(NeededFood);
-            Random random = new Random();
-
-            Dreamling inheritedParent = random.Next(0, 1) == 1 ? this : dreamling;
 
             return new Dreamling
             {
-                Name = inheritedParent.Name,
-                NeededFood = (NeededFood)Enum.GetValues(typeof(NeededFood)).GetValue(random.Next(0, 4)),
-                Quality = CalculateQuality(dreamling.Quality),
+                Name = DreamlingNameGenerator.Generate(),
+                NeededFood = NeededFoodGenerator.Generate(),
+                Quality = Random.Range(1, 6),
             };
-        }
-
-        private int CalculateQuality(int quality)
-        {
-            Random random = new Random();
-
-            if (Quality > quality || Quality < quality)
-            {
-                return random.Next(0, 10) <= 7 ? Quality : quality;
-            }
-
-            return random.Next(0, 1) == 1 ? Quality + 1 : Quality;
         }
     }
 }
