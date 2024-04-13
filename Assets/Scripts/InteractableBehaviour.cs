@@ -12,11 +12,15 @@ public class InteractableBehaviour : MonoBehaviour
         HoverText?.SetActive(false);
     }
 
+    private void ShowInteractText(bool show)
+    {
+            HoverText?.SetActive(true);
+    }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            HoverText?.SetActive(true);
         }
     }
 
