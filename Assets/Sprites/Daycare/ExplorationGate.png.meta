@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c9f7c9ba68fcf1b498204869af7c31a6
+guid: 6e7c89d24a94bbf41ae77cd940f02195
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2116468192164858587
-    second: Dreamling_2_0
+      213: 2632302266519449649
+    second: ExplorationGate_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,11 +46,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,22 +113,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dreamling_2_0
+      name: ExplorationGate_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 26
-        width: 95
-        height: 92
+        x: 0
+        y: 0
+        width: 300
+        height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bda46647b943f5d10800000000000000
-      internalID: 2116468192164858587
+      spriteID: 130f85107f0d78420800000000000000
+      internalID: 2632302266519449649
       vertices: []
       indices: 
       edges: []
@@ -136,15 +136,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
-    internalID: 0
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dreamling_2_0: 2116468192164858587
+      ExplorationGate_0: 2632302266519449649
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

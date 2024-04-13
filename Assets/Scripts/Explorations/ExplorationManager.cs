@@ -5,6 +5,6 @@ public class ExplorationManager : MonoBehaviour
 {
     public void EndExploration()
     {
-        SceneManager.LoadScene("Daycare");
+        SceneManager.LoadScene("Daycare Dom");
     }
 }

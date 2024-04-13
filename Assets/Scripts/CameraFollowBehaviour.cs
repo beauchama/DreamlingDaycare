@@ -10,14 +10,14 @@ public class CameraFollowBehaviour : MonoBehaviour
 
     private void Start()
     {
-        target = GameManager.Instance.Player.transform;
+        //target = GameManager.Instance.Player.transform;
     }
 
     private void LateUpdate()
     {
         Vector3 targetPosition = Vector3.SmoothDamp(
             transform.position,
-            target.position + offset,
+            GameManager.Instance.Player.transform.position + offset,
             ref currentVelocity,
             smoothTime
             );
