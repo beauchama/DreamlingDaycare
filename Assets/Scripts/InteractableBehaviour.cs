@@ -4,43 +4,36 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Collider2D))]
 public class InteractableBehaviour : MonoBehaviour
 {
+    public float InteractableDistance = 1f;
     public GameObject HoverText;
     public UnityEvent OnInteract;
 
     private void Start()
     {
-        if (HoverText != null)
-            HoverText.SetActive(false);
+        ShowInteractText(false);
+    }
+
+    private void Update()
+    {
+        if (Vector2.Distance(GameManager.Instance.Player.transform.position, transform.position) < InteractableDistance)
+        {
+            ShowInteractText(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                OnInteract.Invoke();
+            }
+        }
+        else
+        {
+            ShowInteractText(false);
+        }
     }
 
     private void ShowInteractText(bool show)
     {
-            HoverText?.SetActive(true);
-    }
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        if (HoverText)
         {
-            if (HoverText != null)
-                HoverText.SetActive(true);
-        }
-    }
-
-    public void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            if (HoverText != null)
-                HoverText.SetActive(false);
-        }
-    }
-
-    public void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
-        {
-            OnInteract.Invoke();
+            HoverText.SetActive(show);
         }
     }
 }
