@@ -657,7 +657,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 633307598}
         m_TargetAssemblyTypeName: DaycareManager, Assembly-CSharp
-        m_MethodName: GotoDom
+        m_MethodName: Explore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -830,6 +830,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dreamlingCharacter: {fileID: 0}
+  Scenes:
+  - Dom
+  - Cavern
 --- !u!4 &633307599
 Transform:
   m_ObjectHideFlags: 0

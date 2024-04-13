@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Daycare Dom.unity
     guid: 753fb9bdd217afa4cb7d13122659fe47
+  - enabled: 1
+    path: Assets/Scenes/Cavern.unity
+    guid: eca750e6023b0c149b411aa7d41a569a
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

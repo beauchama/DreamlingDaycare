@@ -1,12 +1,10 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class DaycareManager : MonoBehaviour
 {
     public GameObject dreamlingCharacter;
+    public string[] Scenes = Array.Empty<string>();
 
     private void Start()
     {
@@ -25,8 +23,10 @@ public class DaycareManager : MonoBehaviour
         }
     }
 
-    public void GotoDom()
+    public void Explore()
     {
-        SceneTransitionManager.Instance.ChangeScene("Dom");
+        var randomSceneIndex = UnityEngine.Random.Range(0, Scenes.Length);
+
+        SceneTransitionManager.Instance.ChangeScene(Scenes[randomSceneIndex]);
     }
 }
