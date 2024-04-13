@@ -15,13 +15,13 @@ namespace Dreamling.Characters
 
         public NeededFood NeededFood { get; set; }
 
-        public CharacterTraits CharacterTraits { get; set; }
+        public CharacterTrait CharacterTrait { get; set; }
 
-        public bool CanBreed(NeededFood neededFood, CharacterTraits characterTraits)
+        public bool CanBreed(NeededFood neededFood, CharacterTrait characterTrait)
         {
             return !(HasIllness || IsInjured)
             && NeededFood == neededFood
-            && CharacterTraits.MatchedTraits.Any(m => m == characterTraits);
+            && CharacterTrait.MatchedTraits.Any(m => m == characterTrait);
         }
 
         public Dreamling Breed(Dreamling dreamling)
@@ -34,7 +34,7 @@ namespace Dreamling.Characters
             {
                 Name = inheritedParent.Name,
                 NeededFood = (NeededFood)Enum.GetValues(typeof(NeededFood)).GetValue(random.Next(0, 4)),
-                CharacterTraits = inheritedParent.CharacterTraits.MatchedTraits[new Random().Next(0, 2)],
+                CharacterTrait = inheritedParent.CharacterTrait.MatchedTraits[new Random().Next(0, 2)],
                 Quality = CalculateQuality(dreamling.Quality),
             };
         }
@@ -59,18 +59,5 @@ namespace Dreamling.Characters
         Fish,
         Flower,
         Legume
-    }
-
-    public class CharacterTraits
-    {
-        public static CharacterTraits Timid = new CharacterTraits() { MatchedTraits = new[] { Timid, Aggressive, Playful } };
-
-        public static CharacterTraits Aggressive = new CharacterTraits() { MatchedTraits = new[] { Timid, Aggressive, Curious } };
-
-        public static CharacterTraits Playful = new CharacterTraits { MatchedTraits = new[] { Timid, Curious, Playful } };
-
-        public static CharacterTraits Curious = new CharacterTraits { MatchedTraits = new[] { Playful, Timid, Curious } };
-
-        public CharacterTraits[] MatchedTraits { get; set; } = Array.Empty<CharacterTraits>();
     }
 }
