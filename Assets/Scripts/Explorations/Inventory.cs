@@ -1,4 +1,7 @@
+using System.Linq;
 using Dreamlings.Interfaces;
+using TMPro;
+using UnityEngine;
 
 namespace Dreamlings.Explorations
 {
@@ -47,6 +50,8 @@ namespace Dreamlings.Explorations
                     Flowers--;
                     break;
             }
+
+            UpdateUI();
         }
 
         public void AddFood(NeededFood neededFood)
@@ -69,6 +74,24 @@ namespace Dreamlings.Explorations
                     Flowers++;
                     break;
             }
+
+            UpdateUI();
+        }
+
+        private void UpdateUI()
+        {
+            var uiObject = GameObject.FindGameObjectsWithTag("InventoryUI").FirstOrDefault();
+            if (uiObject is null)
+            {
+                return;
+            }
+
+            var textBoxes = uiObject.GetComponentsInChildren<TextMeshProUGUI>();
+            textBoxes.Single(x => x.name == "QtyPlants").text = Plants.ToString();
+            textBoxes.Single(x => x.name == "QtyMeat").text = Meats.ToString();
+            textBoxes.Single(x => x.name == "QtyVeggies").text = Legumes.ToString();
+            textBoxes.Single(x => x.name == "QtyFish").text = Fishes.ToString();
+            textBoxes.Single(x => x.name == "QtyFlowers").text = Flowers.ToString();
         }
     }
 }

@@ -11,10 +11,14 @@ public class GameOverManager : MonoBehaviour
     private void Start()
     {
         gameOverCanvasGroup.alpha = 0;
+        gameOverCanvasGroup.interactable = false;
+        gameOverCanvasGroup.blocksRaycasts = false;
     }
 
     public void DisplayGameOver(uint finalScore)
     {
+        gameOverCanvasGroup.interactable = true;
+        gameOverCanvasGroup.blocksRaycasts = true;
         scoreText.text = $"You managed to get ${finalScore} !";
         gameOverCanvasGroup.DOFade(1, 0.25f).SetUpdate(true);
     }
