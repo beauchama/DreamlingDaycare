@@ -3,6 +3,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public float TimeRemaining;
 
     void Awake()
     {
@@ -12,5 +13,10 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
+    }
+
+    public void GameOver()
+    {
+        Debug.Log("Game Over!");
     }
 }
