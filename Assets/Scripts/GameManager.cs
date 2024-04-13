@@ -1,9 +1,11 @@
+using Dreamling.Explorations;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public float TimeRemaining;
+    public Inventory Inventory = new Inventory();
 
     void Awake()
     {
