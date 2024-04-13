@@ -1,4 +1,5 @@
 using Dreamlings.Explorations;
+using Dreamlings.Interfaces;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -43,5 +44,15 @@ public class GameManager : MonoBehaviour
     {
         var currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
+    }
+
+    public void AddMeat()
+    {
+        Inventory.AddFood(NeededFood.Meat);
+    }
+
+    public void RemoveMeat()
+    {
+        Inventory.RemoveFood(NeededFood.Meat);
     }
 }
