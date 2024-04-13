@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Collider2D))]
 public class InteractableBehaviour : MonoBehaviour
 {
     public float InteractableDistance = 1f;
