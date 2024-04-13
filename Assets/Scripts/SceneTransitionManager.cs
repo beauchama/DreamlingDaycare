@@ -1,4 +1,3 @@
-using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -31,6 +30,6 @@ public class SceneTransitionManager : MonoBehaviour
 
     private Tween FadeToClear()
     {
-        return canvasGroup.DOFade(0, FADE_DURATION).SetUpdate(true);
+        return canvasGroup.DOFade(0, 2 * FADE_DURATION).SetUpdate(true);
     }
 }

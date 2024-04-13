@@ -1,5 +1,6 @@
 using Dreamlings.Explorations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public float TimeRemaining;
     public Inventory Inventory = new Inventory();
+    public GameOverManager gameOverManager;
 
     void Awake()
     {
@@ -20,8 +22,26 @@ public class GameManager : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ReloadCurrentScene();
+        }
+    }
+
     public void GameOver()
     {
         Debug.Log("Game Over!");
+        if (gameOverManager is not null)
+        {
+            gameOverManager.DisplayGameOver(2461);
+        }
+    }
+
+    private void ReloadCurrentScene()
+    {
+        var currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
     }
 }
