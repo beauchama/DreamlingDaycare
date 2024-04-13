@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 06f1b2f139efb924c9525ef3c1583762
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 261036
+  packageName: 'ProtoSprite: Rapid 2D Art'
+  packageVersion: 1.2.5
+  assetPath: Assets/ProtoSprite/Editor/UndoData.cs
+  uploadId: 656061

@@ -1,0 +1,51 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWTexture2D<float4> Result;
+
+int2 startPixel;
+int2 endPixel;
+float4 paintColor;
+int brushSize;
+int4 spriteRect;
+
+[numthreads(1,1,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    int x0 = startPixel.x;
+    int x1 = endPixel.x;
+    int y0 = startPixel.y;
+    int y1 = endPixel.y;
+
+
+    int dx = abs(x1 - x0), sx = x0 < x1 ? 1 : -1;
+    int dy = -abs(y1 - y0), sy = y0 < y1 ? 1 : -1;
+    int err = dx + dy, e2; /* error value e_xy */
+
+    //int offset = floor(brushSize * 0.5);
+
+    for (; ; )
+    {
+        int2 pixel = int2(x0, y0);
+        // Check texel is within sprite rect bounds
+        if (pixel.x >= spriteRect.x && pixel.y >= spriteRect.y && pixel.x < spriteRect.z && pixel.y < spriteRect.w)
+        {
+            Result[pixel] = paintColor;
+        }
+
+        /*for (int x = 0; x < brushSize; x++)
+        {
+            for (int y = 0; y < brushSize; y++)
+            {
+                Result[int2(x0 + x - offset, y0 + y - offset)] = paintColor;
+            }
+        }*/
+
+        if (x0 == x1 && y0 == y1) break;
+        e2 = 2 * err;
+        if (e2 >= dy) { err += dy; x0 += sx; } /* e_xy+e_x > 0 */
+        if (e2 <= dx) { err += dx; y0 += sy; } /* e_xy+e_y < 0 */
+    }
+}

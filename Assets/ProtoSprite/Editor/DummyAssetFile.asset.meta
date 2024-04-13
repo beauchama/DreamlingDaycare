@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0bbcd3cfff8b1904bbef8f2cffbdc974
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 261036
+  packageName: 'ProtoSprite: Rapid 2D Art'
+  packageVersion: 1.2.5
+  assetPath: Assets/ProtoSprite/Editor/DummyAssetFile.asset
+  uploadId: 656061

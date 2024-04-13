@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7083a370d3403754b9379ba2f4099bdf
+ComputeShaderImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 261036
+  packageName: 'ProtoSprite: Rapid 2D Art'
+  packageVersion: 1.2.5
+  assetPath: Assets/ProtoSprite/Editor/Shaders/BresenhamLine.compute
+  uploadId: 656061

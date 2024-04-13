@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8e53b24a241387940ab6ed08aeb4f008
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 261036
+  packageName: 'ProtoSprite: Rapid 2D Art'
+  packageVersion: 1.2.5
+  assetPath: Assets/ProtoSprite/Editor/DefaultSettingsWindow.cs
+  uploadId: 656061

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 68ce2fb9547d90340b1e28c9efc00c28
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 261036
+  packageName: 'ProtoSprite: Rapid 2D Art'
+  packageVersion: 1.2.5
+  assetPath: Assets/ProtoSprite/Editor/Tools/EraseTool.cs
+  uploadId: 656061

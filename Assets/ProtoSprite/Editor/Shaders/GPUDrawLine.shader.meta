@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d96a0201c44c1ce40a087d20f9a8a57d
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 261036
+  packageName: 'ProtoSprite: Rapid 2D Art'
+  packageVersion: 1.2.5
+  assetPath: Assets/ProtoSprite/Editor/Shaders/GPUDrawLine.shader
+  uploadId: 656061

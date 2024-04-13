@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 326b98be9b6259f4aa8b113f31afc436
+AssemblyDefinitionReferenceImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 261036
+  packageName: 'ProtoSprite: Rapid 2D Art'
+  packageVersion: 1.2.5
+  assetPath: Assets/ProtoSprite/Editor/InternalBridge/InternalBridgeDef.asmref
+  uploadId: 656061
