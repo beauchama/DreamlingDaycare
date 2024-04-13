@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 051ab1e9bd4233d4faa12a25beeae81c
+guid: 06d1e03c9ac143e44802941dd4ed3d92
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      retarded_baby_0: 5447286839375845652
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
