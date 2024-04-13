@@ -5,7 +5,6 @@ public class PauseManager : MonoBehaviour
 {
     private const float FADE_DURATION = 0.25f;
 
-    [SerializeField] private SceneTransitionManager sceneTransitionManager;
     private bool isPaused;
     private CanvasGroup pauseCanvas;
 
@@ -15,6 +14,7 @@ public class PauseManager : MonoBehaviour
         pauseCanvas = GetComponentInChildren<CanvasGroup>();
         pauseCanvas.alpha = 0;
         pauseCanvas.interactable = false;
+        pauseCanvas.blocksRaycasts = false;
     }
 
     // Update is called once per frame
@@ -51,18 +51,20 @@ public class PauseManager : MonoBehaviour
     {
         Time.timeScale = 1;
         isPaused = false;
-        sceneTransitionManager.ChangeScene("MainMenu");
+        SceneTransitionManager.Instance.ChangeScene("MainMenu");
     }
 
     private void FadeIn()
     {
         pauseCanvas.DOFade(1, FADE_DURATION).SetUpdate(true);
         pauseCanvas.interactable = true;
+        pauseCanvas.blocksRaycasts = true;
     }
 
     private void FadeOut()
     {
         pauseCanvas.DOFade(0, FADE_DURATION).SetUpdate(true);
         pauseCanvas.interactable = false;
+        pauseCanvas.blocksRaycasts = false;
     }
 }

@@ -6,7 +6,6 @@ public class GameOverManager : MonoBehaviour
 {
     [SerializeField] private CanvasGroup gameOverCanvasGroup;
     [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private SceneTransitionManager sceneTransitionManager;
 
     private void Start()
     {
@@ -26,12 +25,12 @@ public class GameOverManager : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1;
-        sceneTransitionManager.ChangeScene("Daycare");
+        SceneTransitionManager.Instance.ChangeScene("Daycare");
     }
 
     public void MainMenu()
     {
         Time.timeScale = 1;
-        sceneTransitionManager.ChangeScene("MainMenu");
+        SceneTransitionManager.Instance.ChangeScene("MainMenu");
     }
 }

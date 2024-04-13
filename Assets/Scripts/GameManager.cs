@@ -16,11 +16,11 @@ public class GameManager : MonoBehaviour
         if (Instance is not null)
         {
             Destroy(gameObject);
+            return;
         }
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()

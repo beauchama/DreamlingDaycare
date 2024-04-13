@@ -1,12 +1,26 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneTransitionManager : MonoBehaviour
 {
+    public static SceneTransitionManager Instance { get; private set; }
+
     private const float FADE_DURATION = 0.5f;
 
     [SerializeField] private CanvasGroup canvasGroup;
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
 
     private void Start()
     {
