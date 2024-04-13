@@ -18,11 +18,11 @@ namespace Dreamling.Characters
 
         public CharacterTrait CharacterTrait { get; set; }
 
-        public bool CanBreed(CharacterTraits characterTraits)
+        public bool CanBreed(CharacterTrait characterTraits)
         {
             return !(HasIllness || IsInjured)
             && GameManager.Instance.Inventory.HasFood(NeededFood)
-            && CharacterTraits.MatchedTraits.Any(m => m == characterTraits);
+            && CharacterTrait.MatchedTraits.Any(m => m == characterTraits);
         }
 
         public Dreamling Breed(Dreamling dreamling)
