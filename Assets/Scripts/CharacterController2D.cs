@@ -66,7 +66,7 @@ public class CharacterController2D : MonoBehaviour
     {
         float move = Input.GetAxisRaw("Horizontal");
         bool jump = Input.GetKeyDown(KeyCode.Space);
-        Debug.Log(move);
+
         Move(move, false, jump);
         Animate(move, false, jump);
     }
