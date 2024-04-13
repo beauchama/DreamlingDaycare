@@ -15,6 +15,7 @@ namespace Dreamlings.Characters
         public bool IsInjured { get; set; }
 
         public NeededFood NeededFood { get; set; }
+        public DreamlingType DreamlingType { get; set; }
 
         public bool CanBreed()
         {

@@ -2,6 +2,7 @@ using DG.Tweening;
 using Dreamlings.Characters;
 using Dreamlings.Tools;
 using System.Linq;
+using Dreamlings.Interfaces;
 using TMPro;
 using UnityEngine;
 
@@ -20,19 +21,46 @@ public class DreamlingCharacter : MonoBehaviour
     public Sprite[] Sprites;
     public GameObject Baby;
 
+    public Dreamling OverriddenDreamling;
+    public bool OverrideCarry;
+
     // Start is called before the first frame update
     void Start()
     {
+        timer = changeInterval;
+        statContainer = GetComponentInChildren<Canvas>();
+
+        if (OverriddenDreamling != null)
+        {
+            dreamling = OverriddenDreamling;
+            GetComponent<SpriteRenderer>().sprite = Sprites[(int)dreamling.DreamlingType];
+            SetDreamlingStats();
+
+            if (OverrideCarry)
+            {
+                isPickup = true;
+
+                transform.DOScale(0.5f, 0f);
+                transform.parent = GameManager.Instance.Player.transform;
+
+                transform.DOLocalMove(new Vector3(0.5f, 0.5f, 0f), 0f);
+                GetComponent<InteractableBehaviour>().enabled = false;
+                PlayerManager.Instance.CarriedDreamling = dreamling;
+            }
+
+            return;
+        }
+
+        var dreamlingType = Random.Range(0, 2);
+
         dreamling = new Dreamling
         {
             Name = DreamlingNameGenerator.Generate(),
             NeededFood = NeededFoodGenerator.Generate(),
+            DreamlingType = (DreamlingType)dreamlingType,
         };
 
-        GetComponent<SpriteRenderer>().sprite = Sprites[Random.Range(0, Sprites.Length)];
-        statContainer = GetComponentInChildren<Canvas>();
-
-        timer = changeInterval;
+        GetComponent<SpriteRenderer>().sprite = Sprites[dreamlingType];
         SetRandomTargetPosition();
         SetDreamlingStats();
     }
@@ -125,6 +153,8 @@ public class DreamlingCharacter : MonoBehaviour
 
         transform.DOLocalMove(new Vector3(0.5f, 0.5f, 0f), 0.5f);
         GetComponent<InteractableBehaviour>().enabled = false;
+
+        PlayerManager.Instance.CarriedDreamling = dreamling;
     }
 
     private void Drop()
@@ -134,6 +164,8 @@ public class DreamlingCharacter : MonoBehaviour
         transform.DOScale(1f, 0.5f);
         transform.parent = null;
         GetComponent<InteractableBehaviour>().enabled = true;
+
+        PlayerManager.Instance.CarriedDreamling = null;
     }
 
     private void SetDreamlingStats()
