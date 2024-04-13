@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public GameObject Player;
-    public float TimeRemaining;
     public Inventory Inventory = new Inventory();
     public GameOverManager gameOverManager;
+    public Score score;
 
     void Awake()
     {
@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        Player = GameObject.FindGameObjectWithTag("Player");
+        score = GetComponent<Score>();
     }
 
     private void Update()
@@ -36,7 +38,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Over!");
         if (gameOverManager is not null)
         {
-            gameOverManager.DisplayGameOver(2461);
+            gameOverManager.DisplayGameOver(score.scoreText.text);
         }
     }
 

@@ -21,6 +21,8 @@ public class DreamlingCharacter : MonoBehaviour
     public Sprite[] Sprites;
     public GameObject Baby;
 
+    public int Score => dreamling.Score;
+
     public Dreamling OverriddenDreamling;
     public bool OverrideCarry;
 
