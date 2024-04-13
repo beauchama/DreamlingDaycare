@@ -12,7 +12,9 @@ public class DreamlingCharacter : MonoBehaviour
     private Dreamling dreamling;
     private float timer;
     private Vector3 targetPosition;
+    private Canvas statContainer;
 
+    public float InteractableDistance = 1f;
     public float moveSpeed = 1f;
     public float changeInterval = 2f;
     public Sprite[] Sprites;
@@ -22,10 +24,12 @@ public class DreamlingCharacter : MonoBehaviour
     {
         dreamling = new Dreamling
         {
-            Name = DreamlingNameGenerator.Generate()
+            Name = DreamlingNameGenerator.Generate(),
+            NeededFood = NeededFoodGenerator.Generate(),
         };
 
         GetComponent<SpriteRenderer>().sprite = Sprites[Random.Range(0, Sprites.Length)];
+        statContainer = GetComponentInChildren<Canvas>();
 
         timer = changeInterval;
         SetRandomTargetPosition();
@@ -37,6 +41,8 @@ public class DreamlingCharacter : MonoBehaviour
     {
         if (isPickup)
         {
+            statContainer.gameObject.SetActive(false);
+
             if (Input.GetKeyDown(KeyCode.G))
             {
                 Drop();
@@ -44,6 +50,11 @@ public class DreamlingCharacter : MonoBehaviour
 
             return;
         }
+
+        if (Vector2.Distance(GameManager.Instance.Player.transform.position, transform.position) < InteractableDistance)
+            statContainer.gameObject.SetActive(true);
+        else
+            statContainer.gameObject.SetActive(false);
 
         Move();
     }
@@ -98,12 +109,10 @@ public class DreamlingCharacter : MonoBehaviour
 
     private void SetDreamlingStats()
     {
-        Canvas canvas = GetComponentInChildren<Canvas>();
-
-        if (canvas == null)
+        if (!statContainer)
             return;
 
-        var stats = canvas.GetComponentsInChildren<TextMeshProUGUI>();
+        var stats = statContainer.GetComponentsInChildren<TextMeshProUGUI>();
 
         SetText("Name", dreamling.Name);
         SetText("Food", dreamling.NeededFood.ToString());
