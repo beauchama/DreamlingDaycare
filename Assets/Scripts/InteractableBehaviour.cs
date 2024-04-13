@@ -9,7 +9,8 @@ public class InteractableBehaviour : MonoBehaviour
 
     private void Start()
     {
-        HoverText?.SetActive(false);
+        if (HoverText != null)
+            HoverText.SetActive(false);
     }
 
     private void ShowInteractText(bool show)
@@ -21,6 +22,8 @@ public class InteractableBehaviour : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            if (HoverText != null)
+                HoverText.SetActive(true);
         }
     }
 
@@ -28,7 +31,8 @@ public class InteractableBehaviour : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            HoverText?.SetActive(false);
+            if (HoverText != null)
+                HoverText.SetActive(false);
         }
     }
 
