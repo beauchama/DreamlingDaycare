@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public float TimeRemaining;
     public Inventory Inventory = new Inventory();
+    public GameOverManager gameOverManager;
 
     void Awake()
     {
@@ -23,5 +24,9 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Game Over!");
+        if (gameOverManager is not null)
+        {
+            gameOverManager.DisplayGameOver(2461);
+        }
     }
 }
