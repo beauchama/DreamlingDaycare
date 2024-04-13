@@ -789,6 +789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cb1c24eea7cea94a92631f19ef5ead4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneTransitionManager: {fileID: 0}
 --- !u!1 &7090643374007492969
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +877,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7090643374007492969}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

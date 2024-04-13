@@ -1,12 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MainMenuManager : MonoBehaviour
 {
+    [SerializeField] private SceneTransitionManager sceneTransitionManager;
+
     public void StartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Daycare");
+        sceneTransitionManager.ChangeScene("Daycare");
     }
 
     public void QuitGame()

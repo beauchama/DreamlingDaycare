@@ -1,12 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
 public class PauseManager : MonoBehaviour
 {
-    private bool isPaused = false;
+    private const float FADE_DURATION = 0.25f;
 
+    [SerializeField] private SceneTransitionManager sceneTransitionManager;
+    private bool isPaused;
     private CanvasGroup pauseCanvas;
 
     // Start is called before the first frame update
@@ -36,21 +36,33 @@ public class PauseManager : MonoBehaviour
     public void PauseGame()
     {
         isPaused = true;
-        pauseCanvas.DOFade(1, 0.5f).SetUpdate(true);
-        pauseCanvas.interactable = true;
+        FadeIn();
         Time.timeScale = 0;
     }
 
     public void ResumeGame()
     {
-        Time.timeScale = 1;
+        FadeOut();
         isPaused = false;
-        pauseCanvas.DOFade(0, 0.5f).SetUpdate(true);
-        pauseCanvas.interactable = false;
+        Time.timeScale = 1;
     }
 
     public void MainMenu()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
+        isPaused = false;
+        sceneTransitionManager.ChangeScene("MainMenu");
+    }
+
+    private void FadeIn()
+    {
+        pauseCanvas.DOFade(1, FADE_DURATION).SetUpdate(true);
+        pauseCanvas.interactable = true;
+    }
+
+    private void FadeOut()
+    {
+        pauseCanvas.DOFade(0, FADE_DURATION).SetUpdate(true);
+        pauseCanvas.interactable = false;
     }
 }
