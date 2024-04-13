@@ -9,14 +9,16 @@ public class InteractableBehaviour : MonoBehaviour
 
     private void Start()
     {
-        HoverText?.SetActive(false);
+        if (HoverText != null)
+            HoverText.SetActive(false);
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            HoverText?.SetActive(true);
+            if (HoverText != null)
+                HoverText.SetActive(true);
         }
     }
 
@@ -24,7 +26,8 @@ public class InteractableBehaviour : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            HoverText?.SetActive(false);
+            if (HoverText != null)
+                HoverText.SetActive(false);
         }
     }
 
