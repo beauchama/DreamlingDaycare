@@ -1,6 +1,6 @@
-using Dreamling.Interfaces;
+using Dreamlings.Interfaces;
 
-namespace Dreamling.Explorations
+namespace Dreamlings.Explorations
 {
     public class Inventory
     {

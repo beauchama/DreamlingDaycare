@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dreamling.Interfaces
+namespace Dreamlings.Interfaces
 {
     public class CharacterTrait
     {

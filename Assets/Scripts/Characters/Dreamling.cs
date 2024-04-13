@@ -1,8 +1,7 @@
-using Dreamling.Interfaces;
+using Dreamlings.Interfaces;
 using System;
-using System.Linq;
 
-namespace Dreamling.Characters
+namespace Dreamlings.Characters
 {
     public class Dreamling
     {
