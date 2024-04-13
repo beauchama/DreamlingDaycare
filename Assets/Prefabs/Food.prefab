@@ -168,6 +168,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FoodType: 1
+  Sprites:
+  - {fileID: 21300000, guid: 2e3dab2b10744c942b97f60f29d98b87, type: 3}
+  - {fileID: 8984754096541894249, guid: af23175cd33f23841bcca54ee39af8c2, type: 3}
 --- !u!1 &5142330243682201013
 GameObject:
   m_ObjectHideFlags: 0

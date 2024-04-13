@@ -6,6 +6,12 @@ public class FindableFoodBehavior : MonoBehaviour
 {
     private bool CanBePickedUp = true;
     public NeededFood FoodType;
+    public Sprite[] Sprites;
+
+    private void Start()
+    {
+        GetComponent<SpriteRenderer>().sprite = Sprites[(int)FoodType];
+    }
 
     public void PickupFood()
     {
