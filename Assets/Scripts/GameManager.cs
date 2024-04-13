@@ -4,6 +4,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public GameObject Player;
     public float TimeRemaining;
     public Inventory Inventory = new Inventory();
 
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
+        DontDestroyOnLoad(gameObject);
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public void GameOver()
