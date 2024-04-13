@@ -1,7 +1,9 @@
 using DG.Tweening;
 using Dreamlings.Characters;
 using Dreamlings.Tools;
+using System.Linq;
 using TMPro;
+using UnityEditor.Search;
 using UnityEngine;
 
 public class DreamlingCharacter : MonoBehaviour
@@ -43,6 +45,11 @@ public class DreamlingCharacter : MonoBehaviour
             return;
         }
 
+        Move();
+    }
+
+    private void Move()
+    {
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
@@ -91,8 +98,20 @@ public class DreamlingCharacter : MonoBehaviour
 
     private void SetDreamlingStats()
     {
-        var stats = GetComponentInChildren<Canvas>().GetComponentsInChildren<TextMeshProUGUI>();
+        Canvas canvas = GetComponentInChildren<Canvas>();
 
-        stats[0].text = dreamling.Name;
+        if (canvas == null)
+            return;
+
+        var stats = canvas.GetComponentsInChildren<TextMeshProUGUI>();
+
+        SetText("Name", dreamling.Name);
+        SetText("Food", dreamling.NeededFood.ToString());
+        SetText("Quality", $"{dreamling.Quality} stars");
+
+        void SetText(string stat, string value)
+        {
+            stats.FirstOrDefault(x => x.name == stat).text = value;
+        }
     }
 }
