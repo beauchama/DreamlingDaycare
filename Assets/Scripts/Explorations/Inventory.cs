@@ -4,15 +4,15 @@ namespace Dreamlings.Explorations
 {
     public class Inventory
     {
-        public int Plants { get; set; }
+        private int Plants { get; set; }
 
-        public int Meats { get; set; }
+        private int Meats { get; set; }
 
-        public int Legumes { get; set; }
+        private int Legumes { get; set; }
 
-        public int Fishes { get; set; }
+        private int Fishes { get; set; }
 
-        public int Flowers { get; set; }
+        private int Flowers { get; set; }
 
         public bool HasFood(NeededFood neededFood)
         {
@@ -45,6 +45,28 @@ namespace Dreamlings.Explorations
                     break;
                 case NeededFood.Flower:
                     Flowers--;
+                    break;
+            }
+        }
+
+        public void AddFood(NeededFood neededFood)
+        {
+            switch (neededFood)
+            {
+                case NeededFood.Plant:
+                    Plants++;
+                    break;
+                case NeededFood.Meat:
+                    Meats++;
+                    break;
+                case NeededFood.Legume:
+                    Legumes++;
+                    break;
+                case NeededFood.Fish:
+                    Fishes++;
+                    break;
+                case NeededFood.Flower:
+                    Flowers++;
                     break;
             }
         }
