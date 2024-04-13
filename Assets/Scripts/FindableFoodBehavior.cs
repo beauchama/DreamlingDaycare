@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class FindableFoodBehavior : MonoBehaviour
 {
+    private bool CanBePickedUp = true;
     public NeededFood FoodType;
 
     public void PickupFood()
     {
+        if (!CanBePickedUp) return;
+
         GameManager.Instance.Inventory.AddFood(FoodType);
-        gameObject.GetComponent<SpriteRenderer>().DOFade(0, 0.5f);
-        Destroy(gameObject, 0.5f);
+        foreach (SpriteRenderer spriteRenderer in gameObject.GetComponentsInChildren<SpriteRenderer>())
+        {
+            spriteRenderer.DOFade(0, 0.5f);
+        }
+        Destroy(gameObject, 1f);
     }
 }
