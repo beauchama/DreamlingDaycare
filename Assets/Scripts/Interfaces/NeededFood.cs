@@ -1,4 +1,4 @@
-﻿namespace Dreamling.Interfaces
+﻿namespace Dreamlings.Interfaces
 {
     public enum NeededFood
     {

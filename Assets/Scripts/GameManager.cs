@@ -1,4 +1,4 @@
-using Dreamling.Explorations;
+using Dreamlings.Explorations;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
