@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Daycare.unity
     guid: ca68da97c877543428e8abe2fa0e4d4f
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: d485f8962d5467b4892449aa444f754f
   m_configObjects: {}
