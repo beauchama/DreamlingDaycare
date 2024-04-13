@@ -16,13 +16,10 @@ namespace Dreamling.Characters
 
         public NeededFood NeededFood { get; set; }
 
-        public CharacterTrait CharacterTrait { get; set; }
-
-        public bool CanBreed(CharacterTrait characterTraits)
+        public bool CanBreed()
         {
             return !(HasIllness || IsInjured)
-            && GameManager.Instance.Inventory.HasFood(NeededFood)
-            && CharacterTrait.MatchedTraits.Any(m => m == characterTraits);
+            && GameManager.Instance.Inventory.HasFood(NeededFood);
         }
 
         public Dreamling Breed(Dreamling dreamling)
@@ -36,7 +33,6 @@ namespace Dreamling.Characters
             {
                 Name = inheritedParent.Name,
                 NeededFood = (NeededFood)Enum.GetValues(typeof(NeededFood)).GetValue(random.Next(0, 4)),
-                CharacterTrait = inheritedParent.CharacterTrait.MatchedTraits[new Random().Next(0, 2)],
                 Quality = CalculateQuality(dreamling.Quality),
             };
         }
