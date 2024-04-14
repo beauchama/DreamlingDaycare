@@ -29,5 +29,13 @@ public class BarnBehavior : MonoBehaviour
         IsInside = !isVisible;
         Facade.DOFade(isVisible ? 1 : 0, 0.3f);
         GameManager.Instance.currentBarnIndex = isVisible ? -1 : BarnIndex;
+        if (IsInside)
+        {
+            MusicManager.Instance.EnterBarn();
+        }
+        else
+        {
+            MusicManager.Instance.ExitBarn();
+        }
     }
 }
