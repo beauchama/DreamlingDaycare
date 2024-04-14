@@ -511,11 +511,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &566323899 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1204571426801770278, guid: 207ade40ea29a7840a14294abb7f412d, type: 3}
-  m_PrefabInstance: {fileID: 993242188}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &633307597
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,7 +540,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ff2bddae31c2694bb51cb1efc04f290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dreamlingCharacter: {fileID: 566323899}
+  dreamlingCharacter: {fileID: 1204571426801770278, guid: 207ade40ea29a7840a14294abb7f412d, type: 3}
+  Scenes:
+  - Dom
 --- !u!4 &633307599
 Transform:
   m_ObjectHideFlags: 0
@@ -776,7 +773,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 633307598}
         m_TargetAssemblyTypeName: DaycareManager, Assembly-CSharp
-        m_MethodName: GotoDom
+        m_MethodName: Explore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -824,67 +821,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666841925}
   m_CullTransparentMesh: 1
---- !u!1001 &993242188
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1204571426801770278, guid: 207ade40ea29a7840a14294abb7f412d, type: 3}
-      propertyPath: m_Name
-      value: DreamlingCharacter
-      objectReference: {fileID: 0}
-    - target: {fileID: 1204571426801770278, guid: 207ade40ea29a7840a14294abb7f412d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8804014774572610475, guid: 207ade40ea29a7840a14294abb7f412d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8804014774572610475, guid: 207ade40ea29a7840a14294abb7f412d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8804014774572610475, guid: 207ade40ea29a7840a14294abb7f412d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8804014774572610475, guid: 207ade40ea29a7840a14294abb7f412d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8804014774572610475, guid: 207ade40ea29a7840a14294abb7f412d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8804014774572610475, guid: 207ade40ea29a7840a14294abb7f412d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8804014774572610475, guid: 207ade40ea29a7840a14294abb7f412d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8804014774572610475, guid: 207ade40ea29a7840a14294abb7f412d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8804014774572610475, guid: 207ade40ea29a7840a14294abb7f412d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8804014774572610475, guid: 207ade40ea29a7840a14294abb7f412d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 207ade40ea29a7840a14294abb7f412d, type: 3}
+--- !u!1 &1621142661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 974707716201597112, guid: 619997af1357df64495263e25f4a4508, type: 3}
+  m_PrefabInstance: {fileID: 5252612696486125267}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1774378168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1041,6 +982,10 @@ PrefabInstance:
       propertyPath: sceneTransitionManager
       value: 
       objectReference: {fileID: 1774378169}
+    - target: {fileID: 4416654118768508407, guid: 619997af1357df64495263e25f4a4508, type: 3}
+      propertyPath: BarnResidentsDisplay
+      value: 
+      objectReference: {fileID: 1621142661}
     - target: {fileID: 4888051281790530449, guid: 619997af1357df64495263e25f4a4508, type: 3}
       propertyPath: m_LocalPosition.x
       value: 625.0223
@@ -1085,6 +1030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7232729657964709358, guid: 619997af1357df64495263e25f4a4508, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7639191067830152715, guid: 619997af1357df64495263e25f4a4508, type: 3}
       propertyPath: sceneTransitionManager
       value: 
@@ -1114,4 +1063,3 @@ SceneRoots:
   - {fileID: 643150660}
   - {fileID: 648355525}
   - {fileID: 453016208}
-  - {fileID: 993242188}
