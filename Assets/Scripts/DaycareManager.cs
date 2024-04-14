@@ -22,6 +22,18 @@ public class DaycareManager : MonoBehaviour
 
     public void Explore()
     {
+        // Count instances of "DreamlingCharacter" in the scene
+        var dreamlingCharacters = FindObjectsByType<DreamlingCharacter>(FindObjectsSortMode.None).Length;
+
+        // Count the total number of Dreamlings in the barns
+        var barnDreamlings = GameManager.Instance.Barns.Sum(barn => barn.Dreamlings.Count);
+
+        if (dreamlingCharacters != barnDreamlings)
+        {
+            GameManager.Instance.errorMessageDisplay.DisplayError("You need to have every Dreamling in the barns to explore!");
+            return;
+        }
+
         var randomSceneIndex = UnityEngine.Random.Range(0, Scenes.Length);
         SceneTransitionManager.Instance.ChangeScene(Scenes[randomSceneIndex]);
     }
