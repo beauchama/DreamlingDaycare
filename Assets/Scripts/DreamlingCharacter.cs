@@ -158,6 +158,7 @@ public class DreamlingCharacter : MonoBehaviour
         GetComponent<InteractableBehaviour>().enabled = false;
 
         PlayerManager.Instance.CarriedDreamling = dreamling;
+        GameManager.Instance.RemoveDreamlingFromBarn(dreamling);
     }
 
     private void Drop()

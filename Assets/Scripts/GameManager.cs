@@ -80,6 +80,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void RemoveDreamlingFromBarn(Dreamling dreamling)
+    {
+        // Find which barn the dreamling is in
+        var barnIndex = Barns.FindIndex(barn => barn.Dreamlings.Contains(dreamling));
+        if (barnIndex >= 0)
+        {
+            Barns[barnIndex].RemoveDreamling(dreamling);
+        }
+    }
+
     private void DisplayBarnResidents()
     {
         UpdateBarnNames();
