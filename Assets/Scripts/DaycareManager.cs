@@ -18,8 +18,11 @@ public class DaycareManager : MonoBehaviour
             {
                 dreamlingChar.OverriddenDreamling = carriedDreamling;
                 dreamlingChar.OverrideCarry = true;
+                dreamlingCharObj.GetComponent<SpriteRenderer>().sortingOrder = 11;
                 dreamlingCharObj.SetActive(true);
             }
+
+            PlayerManager.Instance.CarriedDreamling = null;
         }
     }
 

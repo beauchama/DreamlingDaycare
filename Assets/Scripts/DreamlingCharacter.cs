@@ -150,6 +150,7 @@ public class DreamlingCharacter : MonoBehaviour
     {
         isPickup = true;
 
+        GetComponent<SpriteRenderer>().sortingOrder = 11;
         transform.DOScale(0.5f, 0.5f);
         transform.parent = GameManager.Instance.Player.transform;
 
@@ -163,6 +164,7 @@ public class DreamlingCharacter : MonoBehaviour
     {
         isPickup = false;
 
+        GetComponent<SpriteRenderer>().sortingOrder = 5;
         transform.DOScale(1f, 0.5f);
         transform.parent = null;
         GetComponent<InteractableBehaviour>().enabled = true;
