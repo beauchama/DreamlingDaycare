@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance is not null)
+        if (Instance)
         {
             Destroy(gameObject);
             return;
