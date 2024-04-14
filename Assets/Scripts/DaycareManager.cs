@@ -17,6 +17,16 @@ public class DaycareManager : MonoBehaviour
             PlayerManager.Instance.CarriedDreamling = null;
         }
 
+        if (PlayerManager.Instance.IsExploring)
+        {
+            PlayerManager.Instance.IsExploring = false;
+            var portal = GameObject.Find("ExplorationGate");
+
+            GameManager.Instance.Player.transform.position = portal.transform.position;
+
+            if (Camera.main)
+                Camera.main.transform.position = new Vector3(portal.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
+        }
         SpawnBarnDreamlings();
     }
 
@@ -34,6 +44,7 @@ public class DaycareManager : MonoBehaviour
             return;
         }
 
+        PlayerManager.Instance.IsExploring = true;
         var randomSceneIndex = UnityEngine.Random.Range(0, Scenes.Length);
         SceneTransitionManager.Instance.ChangeScene(Scenes[randomSceneIndex]);
     }

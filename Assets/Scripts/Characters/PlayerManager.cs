@@ -6,6 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance;
     public Dreamling CarriedDreamling;
+    public bool IsExploring;
 
     private void Awake()
     {
