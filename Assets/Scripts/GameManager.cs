@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using Daycare;
+using Dreamlings.Characters;
 using Dreamlings.Explorations;
 using Dreamlings.Interfaces;
 using UnityEngine;
@@ -10,6 +13,12 @@ public class GameManager : MonoBehaviour
     public Inventory Inventory = new Inventory();
     public GameOverManager gameOverManager;
     public Score score;
+    public readonly List<Barn> Barns = new(3)
+    {
+        new Barn(),
+        new Barn(),
+        new Barn()
+    };
 
     void Awake()
     {
@@ -48,6 +57,15 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(currentScene.name);
     }
 
+    public void AddDreamlingToBarn(int barnIndex, Dreamling dreamling)
+    {
+        if (Barns.Count > barnIndex && barnIndex >= 0)
+        {
+            Barns[barnIndex].AddDreamling(dreamling);
+        }
+    }
+
+    // Todo : remove the things below
     public void AddMeat()
     {
         Inventory.AddFood(NeededFood.Meat);
