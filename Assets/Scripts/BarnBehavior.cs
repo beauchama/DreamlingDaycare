@@ -12,7 +12,7 @@ public class BarnBehavior : MonoBehaviour
     {
         var distance = Mathf.Abs(transform.position.x - GameManager.Instance.Player.transform.position.x);
         bool isInRange = distance < Range;
-        Debug.Log("Barn: " + transform.position + " | Player: " + GameManager.Instance.Player.transform.position);
+
         if (!IsInside && isInRange)
         {
             ToggleFacade(false);
