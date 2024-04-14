@@ -55,6 +55,7 @@ MonoBehaviour:
   - {fileID: 5447286839375845652, guid: 06d1e03c9ac143e44802941dd4ed3d92, type: 3}
   - {fileID: 2116468192164858587, guid: c9f7c9ba68fcf1b498204869af7c31a6, type: 3}
   Baby: {fileID: 1204571426801770278}
+  OverrideCarry: 0
 --- !u!212 &-1214940812607449307
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -97,7 +98,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 5447286839375845652, guid: 06d1e03c9ac143e44802941dd4ed3d92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
