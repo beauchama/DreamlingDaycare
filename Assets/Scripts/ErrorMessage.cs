@@ -7,8 +7,12 @@ public class ErrorMessage : MonoBehaviour
 
     public void DisplayError(string message)
     {
+        CancelInvoke(nameof(HideError));
+
         errorText.text = message;
         gameObject.SetActive(true);
+
+        Invoke(nameof(HideError), 3f);
     }
 
     public void HideError()
