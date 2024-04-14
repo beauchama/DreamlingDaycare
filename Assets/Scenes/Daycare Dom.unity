@@ -1178,6 +1178,7 @@ MonoBehaviour:
   Scenes:
   - Dom
   - Cavern
+  - Forest
 --- !u!4 &633307599
 Transform:
   m_ObjectHideFlags: 0
