@@ -39,7 +39,9 @@ public class DaycareManager : MonoBehaviour
 
             foreach (var dreamling in barn.Dreamlings)
             {
-                SpawnDreamling(dreamling, false, barnPosition);
+                var positionOffset = UnityEngine.Random.Range(-6f, 6f);
+                var offsetPosition = new Vector3(barnPosition.Value.x + positionOffset, barnPosition.Value.y, barnPosition.Value.z);
+                SpawnDreamling(dreamling, false, offsetPosition);
             }
         }
     }
