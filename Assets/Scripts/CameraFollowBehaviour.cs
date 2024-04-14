@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class CameraFollowBehaviour : MonoBehaviour
 {
-    private Transform target;
     public Vector3 offset = new Vector3(0, 2, -10);
     public float smoothTime = 0.25f;
 
@@ -10,7 +9,7 @@ public class CameraFollowBehaviour : MonoBehaviour
 
     private void Start()
     {
-        //target = GameManager.Instance.Player.transform;
+        transform.position = new Vector3(GameManager.Instance.Player.transform.position.x, transform.position.y, transform.position.z);
     }
 
     private void LateUpdate()
