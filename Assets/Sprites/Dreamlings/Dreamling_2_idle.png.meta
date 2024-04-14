@@ -1,0 +1,1111 @@
+fileFormatVersion: 2
+guid: 715f3b7675925ec4f8a6bf65fc0f619a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 911814429563639734
+    second: Dreamling_2_idle_0
+  - first:
+      213: -826082760934124737
+    second: Dreamling_2_idle_1
+  - first:
+      213: 7060519922770953404
+    second: Dreamling_2_idle_2
+  - first:
+      213: -6705912023126101065
+    second: Dreamling_2_idle_3
+  - first:
+      213: 9079557344200287666
+    second: Dreamling_2_idle_4
+  - first:
+      213: -5634247833658750006
+    second: Dreamling_2_idle_5
+  - first:
+      213: 5396916368291305375
+    second: Dreamling_2_idle_6
+  - first:
+      213: -7010819973232856662
+    second: Dreamling_2_idle_7
+  - first:
+      213: -2860872733184503029
+    second: Dreamling_2_idle_8
+  - first:
+      213: -731866012080454769
+    second: Dreamling_2_idle_9
+  - first:
+      213: 9166767438580854440
+    second: Dreamling_2_idle_10
+  - first:
+      213: 4653269156530415199
+    second: Dreamling_2_idle_11
+  - first:
+      213: 7990459198996449706
+    second: Dreamling_2_idle_12
+  - first:
+      213: -2509692075318909598
+    second: Dreamling_2_idle_13
+  - first:
+      213: -4910129593798679759
+    second: Dreamling_2_idle_14
+  - first:
+      213: 3175094825223310530
+    second: Dreamling_2_idle_15
+  - first:
+      213: -4170893434231945705
+    second: Dreamling_2_idle_16
+  - first:
+      213: -5425211878143373081
+    second: Dreamling_2_idle_17
+  - first:
+      213: 7197260520626903993
+    second: Dreamling_2_idle_18
+  - first:
+      213: -4130209565507563579
+    second: Dreamling_2_idle_19
+  - first:
+      213: 6703403290261214031
+    second: Dreamling_2_idle_20
+  - first:
+      213: 2094807072266246146
+    second: Dreamling_2_idle_21
+  - first:
+      213: 667617569829674804
+    second: Dreamling_2_idle_22
+  - first:
+      213: -7272197986987851529
+    second: Dreamling_2_idle_23
+  - first:
+      213: -3906736152415626825
+    second: Dreamling_2_idle_24
+  - first:
+      213: 6081088134196418046
+    second: Dreamling_2_idle_25
+  - first:
+      213: 5188513989763500257
+    second: Dreamling_2_idle_26
+  - first:
+      213: -4863241892535098356
+    second: Dreamling_2_idle_27
+  - first:
+      213: -2069105506482183871
+    second: Dreamling_2_idle_28
+  - first:
+      213: 5163361471825460507
+    second: Dreamling_2_idle_29
+  - first:
+      213: -3895600287413525174
+    second: Dreamling_2_idle_30
+  - first:
+      213: 1505863161196010924
+    second: Dreamling_2_idle_31
+  - first:
+      213: -2117501740946996417
+    second: Dreamling_2_idle_32
+  - first:
+      213: 1416764319630942176
+    second: Dreamling_2_idle_33
+  - first:
+      213: 8505513800610903618
+    second: Dreamling_2_idle_34
+  - first:
+      213: 4228769889555192947
+    second: Dreamling_2_idle_35
+  - first:
+      213: 2218966219956608834
+    second: Dreamling_2_idle_36
+  - first:
+      213: -5648317373595694036
+    second: Dreamling_2_idle_37
+  - first:
+      213: -8175965424355344499
+    second: Dreamling_2_idle_38
+  - first:
+      213: 3255337855158524262
+    second: Dreamling_2_idle_39
+  - first:
+      213: -8061445911690287405
+    second: Dreamling_2_idle_40
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dreamling_2_idle_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1840
+        width: 187
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b75737846a67ac00800000000000000
+      internalID: 911814429563639734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_1
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1841
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f33927f0b1a2984f0800000000000000
+      internalID: -826082760934124737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_2
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1841
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4c45626710cf160800000000000000
+      internalID: 7060519922770953404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_3
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1841
+        width: 187
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b33c8e5b80dfe2a0800000000000000
+      internalID: -6705912023126101065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_4
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 1841
+        width: 187
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b5e8da8c41110e70800000000000000
+      internalID: 9079557344200287666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_5
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 1841
+        width: 187
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acb814262712fc1b0800000000000000
+      internalID: -5634247833658750006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_6
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 1842
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f979e76c7d2b5ea40800000000000000
+      internalID: 5396916368291305375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_7
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 1842
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa1fd37116094be90800000000000000
+      internalID: -7010819973232856662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_8
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1586
+        width: 187
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03dfee18632c48d0800000000000000
+      internalID: -2860872733184503029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_9
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1586
+        width: 187
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8343c65db3e7d5f0800000000000000
+      internalID: -731866012080454769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_10
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1587
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aeaa33fa66e63f70800000000000000
+      internalID: 9166767438580854440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_11
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1587
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f56e64fc4abb39040800000000000000
+      internalID: 4653269156530415199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_12
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 1587
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa98f646e40d3ee60800000000000000
+      internalID: 7990459198996449706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_13
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 1587
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 265e00bba58cb2dd0800000000000000
+      internalID: -2509692075318909598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_14
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 1587
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1332f704627bbdbb0800000000000000
+      internalID: -4910129593798679759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_15
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 1588
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cccd91dbe3301c20800000000000000
+      internalID: 3175094825223310530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_16
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1332
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 716889815820e16c0800000000000000
+      internalID: -4170893434231945705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_17
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1332
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e0d8047a86c5b4b0800000000000000
+      internalID: -5425211878143373081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_18
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1332
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bbd8ef8f4ec1e360800000000000000
+      internalID: 7197260520626903993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_19
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1333
+        width: 187
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cf4000784c8ea6c0800000000000000
+      internalID: -4130209565507563579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_20
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 1332
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f43543eb6c5470d50800000000000000
+      internalID: 6703403290261214031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_21
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 1332
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208d767feef321d10800000000000000
+      internalID: 2094807072266246146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_22
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 1332
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43fd18f74aad34900800000000000000
+      internalID: 667617569829674804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_23
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 1332
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f04749e576f31b90800000000000000
+      internalID: -7272197986987851529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_24
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1076
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b9171c0b2c78c9c0800000000000000
+      internalID: -3906736152415626825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_25
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1075
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef5de96607d546450800000000000000
+      internalID: 6081088134196418046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_26
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1075
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e88ff7dbfd410840800000000000000
+      internalID: 5188513989763500257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_27
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1075
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04a5aae34b428cb0800000000000000
+      internalID: -4863241892535098356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_28
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 1075
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1412353218f0943e0800000000000000
+      internalID: -2069105506482183871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_29
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 1075
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1d3817e6e1f7a740800000000000000
+      internalID: 5163361471825460507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_30
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 1074
+        width: 187
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a45aec9ad2c00f9c0800000000000000
+      internalID: -3895600287413525174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_31
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 1074
+        width: 187
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cad5f631196e5e410800000000000000
+      internalID: 1505863161196010924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_32
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 818
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f334597b26f1d92e0800000000000000
+      internalID: -2117501740946996417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_33
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 818
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0efdc0274ab59a310800000000000000
+      internalID: 1416764319630942176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_34
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 818
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 246789dccb7a90670800000000000000
+      internalID: 8505513800610903618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_35
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 817
+        width: 187
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c1ecf3fcb9faa30800000000000000
+      internalID: 4228769889555192947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_36
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 817
+        width: 187
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24fda1d350a5bce10800000000000000
+      internalID: 2218966219956608834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_37
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 817
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2c492856452d91b0800000000000000
+      internalID: -5648317373595694036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_38
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 817
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f7c61c3c2298e80800000000000000
+      internalID: -8175965424355344499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_39
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 817
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6691b9028884d2d20800000000000000
+      internalID: 3255337855158524262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamling_2_idle_40
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 560
+        width: 187
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d6eca997adff1090800000000000000
+      internalID: -8061445911690287405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

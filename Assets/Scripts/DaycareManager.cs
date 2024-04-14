@@ -54,7 +54,7 @@ public class DaycareManager : MonoBehaviour
             dreamlingChar.OverriddenDreamling = dreamling;
             dreamlingChar.OverrideCarry = overrideCarry;
             dreamlingCharObj.GetComponent<SpriteRenderer>().sortingOrder = 11;
-            dreamlingCharObj.GetComponent<Rigidbody2D>().simulated = false;
+            dreamlingCharObj.GetComponent<Rigidbody2D>().simulated = !overrideCarry;
             dreamlingCharObj.SetActive(true);
 
             if (position.HasValue)
