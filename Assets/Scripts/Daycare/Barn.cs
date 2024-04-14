@@ -6,18 +6,23 @@ namespace Daycare
 {
     public class Barn
     {
-        private const int MaxDreamlings = 6;
+        private const int MaxDreamlings = 1;
         public readonly List<Dreamling> Dreamlings = new(MaxDreamlings);
 
-        public bool AddDreamling(Dreamling dreamling)
+        public string AddDreamling(Dreamling dreamling)
         {
-            if (Dreamlings.Count < MaxDreamlings && CheckCompatibility(dreamling))
+            if (Dreamlings.Count >= MaxDreamlings)
             {
-                Dreamlings.Add(dreamling);
-                return true;
+                return "The barn is full! Choose a different barn or sell a Dreamling.";
             }
 
-            return false;
+            if (!CheckCompatibility(dreamling))
+            {
+                return "The Dreamling is not compatible with the other Dreamlings in the barn.";
+            }
+
+            Dreamlings.Add(dreamling);
+            return null;
         }
 
         public void RemoveDreamling(Dreamling dreamling)
