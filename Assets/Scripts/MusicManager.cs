@@ -24,7 +24,7 @@ public class MusicManager : MonoBehaviour
 
     public void EnterBarn()
     {
-        musicSource.DOFade(0.03f, 0.5f);
+        musicSource.DOFade(0.05f, 0.5f);
     }
 
     public void ExitBarn()

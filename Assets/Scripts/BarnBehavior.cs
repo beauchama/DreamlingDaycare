@@ -31,11 +31,11 @@ public class BarnBehavior : MonoBehaviour
         GameManager.Instance.currentBarnIndex = isVisible ? -1 : BarnIndex;
         if (IsInside)
         {
-            MusicManager.Instance.EnterBarn();
+            MusicManager.Instance?.EnterBarn();
         }
         else
         {
-            MusicManager.Instance.ExitBarn();
+            MusicManager.Instance?.ExitBarn();
         }
     }
 }
