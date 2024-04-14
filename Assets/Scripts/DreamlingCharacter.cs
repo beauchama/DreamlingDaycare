@@ -160,6 +160,7 @@ public class DreamlingCharacter : MonoBehaviour
         GetComponent<InteractableBehaviour>().enabled = false;
 
         PlayerManager.Instance.CarriedDreamling = dreamling;
+        GameManager.Instance.RemoveDreamlingFromBarn(dreamling);
     }
 
     private void Drop()
@@ -175,9 +176,7 @@ public class DreamlingCharacter : MonoBehaviour
 
         PlayerManager.Instance.CarriedDreamling = null;
 
-        // TODO : Detect if the player is in the daycare scene, and if so, which barn the player is in
-        var barnIndex = Random.Range(0, 2);
-        GameManager.Instance.AddDreamlingToBarn(barnIndex, dreamling);
+        GameManager.Instance.AddDreamlingToBarn(dreamling);
     }
 
     private void SetDreamlingStats()

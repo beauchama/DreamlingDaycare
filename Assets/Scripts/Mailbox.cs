@@ -10,6 +10,7 @@ public class Mailbox : MonoBehaviour
         {
             GameManager.Instance.score.AddScore(dreamling.Score);
             Destroy(dreamling.gameObject);
+            PlayerManager.Instance.CarriedDreamling = null;
         }
     }
 }

@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public Inventory Inventory = new Inventory();
     public GameOverManager gameOverManager;
     public Score score;
+    public int currentBarnIndex = -1;
 
     public readonly List<Barn> Barns = new(3)
     {
@@ -71,11 +72,21 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(currentScene.name);
     }
 
-    public void AddDreamlingToBarn(int barnIndex, Dreamling dreamling)
+    public void AddDreamlingToBarn(Dreamling dreamling)
     {
-        if (Barns.Count > barnIndex && barnIndex >= 0)
+        if (Barns.Count > currentBarnIndex && currentBarnIndex >= 0)
         {
-            Barns[barnIndex].AddDreamling(dreamling);
+            Barns[currentBarnIndex].AddDreamling(dreamling);
+        }
+    }
+
+    public void RemoveDreamlingFromBarn(Dreamling dreamling)
+    {
+        // Find which barn the dreamling is in
+        var barnIndex = Barns.FindIndex(barn => barn.Dreamlings.Contains(dreamling));
+        if (barnIndex >= 0)
+        {
+            Barns[barnIndex].RemoveDreamling(dreamling);
         }
     }
 
