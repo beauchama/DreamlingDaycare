@@ -54,7 +54,7 @@ namespace Dreamlings.Explorations
             UpdateUI();
         }
 
-        public void AddFood(NeededFood neededFood)
+        public void AddFood(NeededFood neededFood, bool ignoreUI = false)
         {
             switch (neededFood)
             {
@@ -74,6 +74,20 @@ namespace Dreamlings.Explorations
                     Flowers++;
                     break;
             }
+
+            if (!ignoreUI)
+            {
+                UpdateUI();
+            }
+        }
+
+        public void RemoveInventory(Inventory inventory)
+        {
+            Plants -= inventory.Plants;
+            Meats -= inventory.Meats;
+            Legumes -= inventory.Legumes;
+            Fishes -= inventory.Fishes;
+            Flowers -= inventory.Flowers;
 
             UpdateUI();
         }

@@ -19,6 +19,7 @@ public class FindableFoodBehavior : MonoBehaviour
 
         CanBePickedUp = false;
         GameManager.Instance.Inventory.AddFood(FoodType);
+        ExplorationManager.Instance.AddFood(FoodType);
         foreach (SpriteRenderer spriteRenderer in gameObject.GetComponentsInChildren<SpriteRenderer>())
         {
             spriteRenderer.DOFade(0, 0.5f);

@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void ReloadCurrentScene()
+    public void ReloadCurrentScene()
     {
         var currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
