@@ -5,6 +5,7 @@ public class BarnBehavior : MonoBehaviour
 {
     public SpriteRenderer Facade;
     public float Range = 10f;
+    public int BarnIndex;
     private bool IsInside = false;
 
     // Update is called once per frame
@@ -27,5 +28,6 @@ public class BarnBehavior : MonoBehaviour
     {
         IsInside = !isVisible;
         Facade.DOFade(isVisible ? 1 : 0, 0.3f);
+        GameManager.Instance.currentBarnIndex = isVisible ? -1 : BarnIndex;
     }
 }
