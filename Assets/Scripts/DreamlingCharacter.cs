@@ -13,7 +13,7 @@ public class DreamlingCharacter : MonoBehaviour
     private float timer;
     private Vector3 targetPosition;
     private Canvas statContainer;
-
+    private Tween MoveTween;
 
     public float InteractableDistance = 1f;
     public float moveSpeed = 1f;
@@ -150,11 +150,13 @@ public class DreamlingCharacter : MonoBehaviour
     {
         isPickup = true;
 
+        GetComponent<Rigidbody2D>().simulated = false;
         GetComponent<SpriteRenderer>().sortingOrder = 11;
         transform.DOScale(0.5f, 0.5f);
         transform.parent = GameManager.Instance.Player.transform;
 
-        transform.DOLocalMove(new Vector3(0.5f, 0.5f, 0f), 0.5f);
+        MoveTween = transform.DOLocalMove(new Vector3(0.5f, 0.5f, 0f), 0.5f);
+
         GetComponent<InteractableBehaviour>().enabled = false;
 
         PlayerManager.Instance.CarriedDreamling = dreamling;
@@ -164,6 +166,8 @@ public class DreamlingCharacter : MonoBehaviour
     {
         isPickup = false;
 
+        MoveTween.Kill();
+        GetComponent<Rigidbody2D>().simulated = true;
         GetComponent<SpriteRenderer>().sortingOrder = 5;
         transform.DOScale(1f, 0.5f);
         transform.parent = null;

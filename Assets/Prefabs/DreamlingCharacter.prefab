@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: -1214940812607449307}
   - component: {fileID: 2772950487239939211}
   - component: {fileID: 1739027185968794024}
-  m_Layer: 0
+  - component: {fileID: -1860098574321503981}
+  m_Layer: 6
   m_Name: DreamlingCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,12 +141,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1
+  m_Radius: 0.6
 --- !u!114 &1739027185968794024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +176,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!50 &-1860098574321503981
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204571426801770278}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1459027433330168041
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +214,7 @@ GameObject:
   - component: {fileID: 3161959282087245619}
   - component: {fileID: 3698967858408351664}
   - component: {fileID: 8326025687154551762}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Interactive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +350,7 @@ GameObject:
   - component: {fileID: 3999430817442293004}
   - component: {fileID: 123684958468013153}
   - component: {fileID: 5481891466568025653}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Food
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -458,7 +486,7 @@ GameObject:
   - component: {fileID: 8580979100545176366}
   - component: {fileID: 3159947102209052381}
   - component: {fileID: 7018560022611477126}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Quality
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,7 +622,7 @@ GameObject:
   - component: {fileID: 5560865961402366438}
   - component: {fileID: 2824722326787181208}
   - component: {fileID: 5841901214088324158}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,7 +761,7 @@ GameObject:
   - component: {fileID: 8429476989061086784}
   - component: {fileID: 4946327694937610435}
   - component: {fileID: 8874719302009337238}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -784,7 +812,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9
   m_TargetDisplay: 0
 --- !u!114 &6759576271236140177
 MonoBehaviour:
