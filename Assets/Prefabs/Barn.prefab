@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3379375889974760159}
   - component: {fileID: 6889901759382562049}
+  - component: {fileID: 2580956373771145333}
   m_Layer: 0
   m_Name: Facade
   m_TagString: Untagged
@@ -86,6 +87,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2580956373771145333
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5287605317471715965}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 83220e51f0dfeb14183980ae3c0f5780, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8752031198328755308
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,6 +120,7 @@ GameObject:
   - component: {fileID: 8623728184651826145}
   - component: {fileID: 4586323756523204676}
   - component: {fileID: 2751587051848432567}
+  - component: {fileID: 2149645259551693887}
   m_Layer: 0
   m_Name: Barn
   m_TagString: Barn
@@ -191,6 +215,28 @@ MonoBehaviour:
   Facade: {fileID: 6889901759382562049}
   Range: 8
   BarnIndex: 0
+--- !u!95 &2149645259551693887
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8752031198328755308}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 98471b97bc1d43c4db48cd1b140b21c5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &5598412396191798515
 PrefabInstance:
   m_ObjectHideFlags: 0
