@@ -207,6 +207,7 @@ public class DreamlingCharacter : MonoBehaviour
 
         baby.DreamlingType = GetDreamlingType(dreamling.DreamlingType, otherParent.dreamling.DreamlingType);
         babyInstance.GetComponent<DreamlingCharacter>().SetBaby(baby);
+        babyInstance.GetComponent<DreamlingCharacter>().BreedTimer.StartTimer();
 
         parentBarn.AddDreamling(baby);
     }

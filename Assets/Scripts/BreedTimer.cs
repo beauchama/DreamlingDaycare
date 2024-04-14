@@ -31,6 +31,7 @@ public class BreedTimer : MonoBehaviour
     public void StartTimer()
     {
         IsRunning = true;
+        timeRemaining = 10;
         timerText.gameObject.SetActive(true);
     }
 
