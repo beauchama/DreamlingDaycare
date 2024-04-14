@@ -134,16 +134,9 @@ public class DreamlingCharacter : MonoBehaviour
         if (dreamling.CanBreed())
         {
             var dreamlingToBreed = GameManager.Instance.Player.GetComponentInChildren<DreamlingCharacter>().dreamling;
-
             if (dreamlingToBreed.CanBreed())
             {
-                var baby = dreamling.Breed();
-
-                var babyInstance = Instantiate(Baby, GameManager.Instance.Player.transform.position, Quaternion.identity);
-                babyInstance.transform.DOScale(1f, 0.5f);
-
-                baby.DreamlingType = GetDreamlingType(dreamling.DreamlingType, dreamlingToBreed.DreamlingType);
-                babyInstance.GetComponent<DreamlingCharacter>().SetBaby(baby);
+                Breed(dreamlingToBreed);
             }
         }
         else
@@ -185,6 +178,32 @@ public class DreamlingCharacter : MonoBehaviour
         GetComponent<InteractableBehaviour>().enabled = true;
 
         PlayerManager.Instance.CarriedDreamling = null;
+    }
+
+    private void Breed(Dreamling otherParent)
+    {
+        var parentBarn = GameManager.Instance.GetDreamlingBarn(dreamling);
+        if (parentBarn == null)
+        {
+            GameManager.Instance.errorMessageDisplay.DisplayError("The Dreamling must be in a barn to breed.");
+            return;
+        }
+
+        if (parentBarn.IsFull)
+        {
+            GameManager.Instance.errorMessageDisplay.DisplayError("The barn is full! Choose a different barn or sell a Dreamling.");
+            return;
+        }
+
+        var baby = dreamling.Breed();
+
+        var babyInstance = Instantiate(Baby, GameManager.Instance.Player.transform.position, Quaternion.identity);
+        babyInstance.transform.DOScale(1f, 0.5f);
+
+        baby.DreamlingType = GetDreamlingType(dreamling.DreamlingType, otherParent.DreamlingType);
+        babyInstance.GetComponent<DreamlingCharacter>().SetBaby(baby);
+
+        parentBarn.AddDreamling(baby);
     }
 
     private void SetDreamlingStats()

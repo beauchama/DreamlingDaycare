@@ -9,6 +9,8 @@ namespace Daycare
         private const int MaxDreamlings = 6;
         public readonly List<Dreamling> Dreamlings = new(MaxDreamlings);
 
+        public bool IsFull => Dreamlings.Count >= MaxDreamlings;
+
         public string AddDreamling(Dreamling dreamling)
         {
             if (Dreamlings.Count >= MaxDreamlings)
@@ -28,6 +30,11 @@ namespace Daycare
         public void RemoveDreamling(Dreamling dreamling)
         {
             Dreamlings.Remove(dreamling);
+        }
+
+        public bool HasDreamling(Dreamling dreamling)
+        {
+            return Dreamlings.Contains(dreamling);
         }
 
         private bool CheckCompatibility(Dreamling dreamling)

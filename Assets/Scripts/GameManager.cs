@@ -100,6 +100,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public Barn GetDreamlingBarn(Dreamling dreamling)
+    {
+        return Barns.FirstOrDefault(barn => barn.HasDreamling(dreamling));
+    }
+
     private void DisplayBarnResidents()
     {
         UpdateBarnNames();
