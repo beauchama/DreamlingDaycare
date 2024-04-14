@@ -1103,7 +1103,48 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dreamling_2_idle_0: 911814429563639734
+      Dreamling_2_idle_1: -826082760934124737
+      Dreamling_2_idle_10: 9166767438580854440
+      Dreamling_2_idle_11: 4653269156530415199
+      Dreamling_2_idle_12: 7990459198996449706
+      Dreamling_2_idle_13: -2509692075318909598
+      Dreamling_2_idle_14: -4910129593798679759
+      Dreamling_2_idle_15: 3175094825223310530
+      Dreamling_2_idle_16: -4170893434231945705
+      Dreamling_2_idle_17: -5425211878143373081
+      Dreamling_2_idle_18: 7197260520626903993
+      Dreamling_2_idle_19: -4130209565507563579
+      Dreamling_2_idle_2: 7060519922770953404
+      Dreamling_2_idle_20: 6703403290261214031
+      Dreamling_2_idle_21: 2094807072266246146
+      Dreamling_2_idle_22: 667617569829674804
+      Dreamling_2_idle_23: -7272197986987851529
+      Dreamling_2_idle_24: -3906736152415626825
+      Dreamling_2_idle_25: 6081088134196418046
+      Dreamling_2_idle_26: 5188513989763500257
+      Dreamling_2_idle_27: -4863241892535098356
+      Dreamling_2_idle_28: -2069105506482183871
+      Dreamling_2_idle_29: 5163361471825460507
+      Dreamling_2_idle_3: -6705912023126101065
+      Dreamling_2_idle_30: -3895600287413525174
+      Dreamling_2_idle_31: 1505863161196010924
+      Dreamling_2_idle_32: -2117501740946996417
+      Dreamling_2_idle_33: 1416764319630942176
+      Dreamling_2_idle_34: 8505513800610903618
+      Dreamling_2_idle_35: 4228769889555192947
+      Dreamling_2_idle_36: 2218966219956608834
+      Dreamling_2_idle_37: -5648317373595694036
+      Dreamling_2_idle_38: -8175965424355344499
+      Dreamling_2_idle_39: 3255337855158524262
+      Dreamling_2_idle_4: 9079557344200287666
+      Dreamling_2_idle_40: -8061445911690287405
+      Dreamling_2_idle_5: -5634247833658750006
+      Dreamling_2_idle_6: 5396916368291305375
+      Dreamling_2_idle_7: -7010819973232856662
+      Dreamling_2_idle_8: -2860872733184503029
+      Dreamling_2_idle_9: -731866012080454769
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -16,7 +16,10 @@ namespace Dreamlings.Tools
                 randomName += syllables[Random.Range(0, syllables.Length)];
             }
 
-            return randomName;
+            char[] name = randomName.ToCharArray();
+            name[0] = char.ToUpper(name[0]);
+
+            return new string(name);
         }
     }
 }
