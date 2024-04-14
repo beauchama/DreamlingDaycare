@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785a6292175bb2747964a800247dc79f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractableDistance: 0.5
+  InteractableDistance: 1
   HoverText: {fileID: 5142330243682201013}
   OnInteract:
     m_PersistentCalls:
