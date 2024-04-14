@@ -14,6 +14,7 @@ public class DreamlingCharacter : MonoBehaviour
     private Vector3 targetPosition;
     private Canvas statContainer;
     private Tween MoveTween;
+    private SpriteRenderer spriteRenderer;
 
     public float InteractableDistance = 1f;
     public float moveSpeed = 1f;
@@ -35,7 +36,9 @@ public class DreamlingCharacter : MonoBehaviour
         if (OverriddenDreamling != null)
         {
             dreamling = OverriddenDreamling;
-            GetComponent<SpriteRenderer>().sprite = Sprites[(int)dreamling.DreamlingType];
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = Sprites[(int)dreamling.DreamlingType];
+
             SetDreamlingStats();
 
             if (OverrideCarry)
@@ -53,16 +56,18 @@ public class DreamlingCharacter : MonoBehaviour
             return;
         }
 
-        var dreamlingType = Random.Range(0, 2);
-
-        dreamling = new Dreamling
+        if (dreamling == null)
         {
-            Name = DreamlingNameGenerator.Generate(),
-            NeededFood = NeededFoodGenerator.Generate(),
-            DreamlingType = (DreamlingType)dreamlingType,
-        };
+            dreamling = new Dreamling
+            {
+                Name = DreamlingNameGenerator.Generate(),
+                NeededFood = NeededFoodGenerator.Generate(),
+                DreamlingType = DreamlingTypeGenerator.Generate(),
+            };
 
-        GetComponent<SpriteRenderer>().sprite = Sprites[dreamlingType];
+            GetComponent<SpriteRenderer>().sprite = Sprites[(int)dreamling.DreamlingType];
+        }
+
         SetRandomTargetPosition();
         SetDreamlingStats();
     }
@@ -119,7 +124,6 @@ public class DreamlingCharacter : MonoBehaviour
 
     public void Interact()
     {
-
         if (!isPickup && !GameManager.Instance.Player.GetComponentInChildren<DreamlingCharacter>())
         {
             Pickup();
@@ -129,15 +133,9 @@ public class DreamlingCharacter : MonoBehaviour
         if (dreamling.CanBreed())
         {
             var dreamlingToBreed = GameManager.Instance.Player.GetComponentInChildren<DreamlingCharacter>().dreamling;
-
             if (dreamlingToBreed.CanBreed())
             {
-                var baby = dreamling.Breed();
-
-                Instantiate(Baby, GameManager.Instance.Player.transform.position, Quaternion.identity);
-                Baby.transform.DOScale(1f, 0.5f);
-
-                Baby.GetComponent<DreamlingCharacter>().SetBaby(baby);
+                Breed(dreamlingToBreed);
             }
         }
         else
@@ -181,6 +179,32 @@ public class DreamlingCharacter : MonoBehaviour
         PlayerManager.Instance.CarriedDreamling = null;
     }
 
+    private void Breed(Dreamling otherParent)
+    {
+        var parentBarn = GameManager.Instance.GetDreamlingBarn(dreamling);
+        if (parentBarn == null)
+        {
+            GameManager.Instance.errorMessageDisplay.DisplayError("The Dreamling must be in a barn to breed.");
+            return;
+        }
+
+        if (parentBarn.IsFull)
+        {
+            GameManager.Instance.errorMessageDisplay.DisplayError("The barn is full! Choose a different barn or sell a Dreamling.");
+            return;
+        }
+
+        var baby = dreamling.Breed();
+
+        var babyInstance = Instantiate(Baby, GameManager.Instance.Player.transform.position, Quaternion.identity);
+        babyInstance.transform.DOScale(1f, 0.5f);
+
+        baby.DreamlingType = GetDreamlingType(dreamling.DreamlingType, otherParent.DreamlingType);
+        babyInstance.GetComponent<DreamlingCharacter>().SetBaby(baby);
+
+        parentBarn.AddDreamling(baby);
+    }
+
     private void SetDreamlingStats()
     {
         if (!statContainer)
@@ -198,9 +222,15 @@ public class DreamlingCharacter : MonoBehaviour
         }
     }
 
-    public void SetBaby(Dreamling newBorn)
+    private void SetBaby(Dreamling newBorn)
     {
         dreamling = newBorn;
-        SetDreamlingStats();
+        spriteRenderer ??= GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = Sprites[(int)dreamling.DreamlingType];
+    }
+
+    private DreamlingType GetDreamlingType(DreamlingType left, DreamlingType right)
+    {
+        return left == right ? left : Random.Range(0, 2) == 0 ? left : right;
     }
 }

@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractableDistance: 2
+  alwaysInteractable: 1
   HoverText: {fileID: 8040697677048348404}
   OnInteract:
     m_PersistentCalls:
