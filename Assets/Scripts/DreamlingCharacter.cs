@@ -140,11 +140,11 @@ public class DreamlingCharacter : MonoBehaviour
             {
                 var baby = dreamling.Breed();
 
-                Instantiate(Baby, GameManager.Instance.Player.transform.position, Quaternion.identity);
-                Baby.transform.DOScale(1f, 0.5f);
+                var babyInstance = Instantiate(Baby, GameManager.Instance.Player.transform.position, Quaternion.identity);
+                babyInstance.transform.DOScale(1f, 0.5f);
 
                 baby.DreamlingType = GetDreamlingType(dreamling.DreamlingType, dreamlingToBreed.DreamlingType);
-                Baby.GetComponent<DreamlingCharacter>().SetBaby(baby);
+                babyInstance.GetComponent<DreamlingCharacter>().SetBaby(baby);
             }
         }
         else
@@ -205,14 +205,14 @@ public class DreamlingCharacter : MonoBehaviour
         }
     }
 
-    public void SetBaby(Dreamling newBorn)
+    private void SetBaby(Dreamling newBorn)
     {
         dreamling = newBorn;
+        spriteRenderer ??= GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = Sprites[(int)dreamling.DreamlingType];
-        SetDreamlingStats();
     }
 
-    public DreamlingType GetDreamlingType(DreamlingType left, DreamlingType right)
+    private DreamlingType GetDreamlingType(DreamlingType left, DreamlingType right)
     {
         return left == right ? left : Random.Range(0, 2) == 0 ? left : right;
     }
