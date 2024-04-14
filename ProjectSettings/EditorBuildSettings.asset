@@ -15,10 +15,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Daycare.unity
     guid: ca68da97c877543428e8abe2fa0e4d4f
   - enabled: 1
-    path: Assets/Scenes/Dom.unity
+    path: Assets/Scenes/Sky.unity
     guid: e808d831c1f9ed64282e85395f02e352
   - enabled: 1
-    path: Assets/Scenes/Daycare Dom.unity
+    path: Assets/Scenes/Daycare.unity
     guid: 753fb9bdd217afa4cb7d13122659fe47
   - enabled: 1
     path: Assets/Scenes/Cavern.unity

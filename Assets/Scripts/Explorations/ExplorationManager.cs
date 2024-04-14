@@ -40,6 +40,6 @@ public class ExplorationManager : MonoBehaviour
 
     public void EndExploration()
     {
-        SceneTransitionManager.Instance.ChangeScene("Daycare Dom");
+        SceneTransitionManager.Instance.ChangeScene("Daycare");
     }
 }
