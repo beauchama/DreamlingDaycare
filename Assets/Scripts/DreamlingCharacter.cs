@@ -21,6 +21,7 @@ public class DreamlingCharacter : MonoBehaviour
     public float changeInterval = 2f;
     public Sprite[] Sprites;
     public GameObject Baby;
+    public BreedTimer BreedTimer;
 
     public int Score => dreamling.Score;
 
@@ -32,6 +33,7 @@ public class DreamlingCharacter : MonoBehaviour
     {
         timer = changeInterval;
         statContainer = GetComponentInChildren<Canvas>();
+        BreedTimer = GetComponent<BreedTimer>();
 
         if (OverriddenDreamling != null)
         {
@@ -130,10 +132,11 @@ public class DreamlingCharacter : MonoBehaviour
             return;
         }
 
-        if (dreamling.CanBreed())
+        if (dreamling.CanBreed() && !BreedTimer.IsRunning)
         {
-            var dreamlingToBreed = GameManager.Instance.Player.GetComponentInChildren<DreamlingCharacter>().dreamling;
-            if (dreamlingToBreed.CanBreed())
+            var dreamlingToBreed = GameManager.Instance.Player.GetComponentInChildren<DreamlingCharacter>();
+
+            if (dreamlingToBreed.dreamling.CanBreed() && !dreamlingToBreed.BreedTimer.IsRunning)
             {
                 Breed(dreamlingToBreed);
             }
@@ -179,7 +182,7 @@ public class DreamlingCharacter : MonoBehaviour
         PlayerManager.Instance.CarriedDreamling = null;
     }
 
-    private void Breed(Dreamling otherParent)
+    private void Breed(DreamlingCharacter otherParent)
     {
         var parentBarn = GameManager.Instance.GetDreamlingBarn(dreamling);
         if (parentBarn == null)
@@ -194,13 +197,17 @@ public class DreamlingCharacter : MonoBehaviour
             return;
         }
 
+        BreedTimer.StartTimer();
+        otherParent.BreedTimer.StartTimer();
+
         var baby = dreamling.Breed();
 
         var babyInstance = Instantiate(Baby, GameManager.Instance.Player.transform.position, Quaternion.identity);
         babyInstance.transform.DOScale(1f, 0.5f);
 
-        baby.DreamlingType = GetDreamlingType(dreamling.DreamlingType, otherParent.DreamlingType);
+        baby.DreamlingType = GetDreamlingType(dreamling.DreamlingType, otherParent.dreamling.DreamlingType);
         babyInstance.GetComponent<DreamlingCharacter>().SetBaby(baby);
+        babyInstance.GetComponent<DreamlingCharacter>().BreedTimer.StartTimer();
 
         parentBarn.AddDreamling(baby);
     }
