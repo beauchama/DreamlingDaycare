@@ -6,6 +6,7 @@ TagManager:
   tags:
   - InventoryUI
   - BarnDisplay
+  - Barn
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,7 @@ namespace Daycare
 {
     public class Barn
     {
-        private const int MaxDreamlings = 1;
+        private const int MaxDreamlings = 6;
         public readonly List<Dreamling> Dreamlings = new(MaxDreamlings);
 
         public string AddDreamling(Dreamling dreamling)

@@ -1942,7 +1942,7 @@ GameObject:
   - component: {fileID: 1554070221}
   m_Layer: 0
   m_Name: BarnCenter
-  m_TagString: Untagged
+  m_TagString: Barn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2188,7 +2188,7 @@ GameObject:
   - component: {fileID: 1781310679}
   m_Layer: 0
   m_Name: BarnLeft
-  m_TagString: Untagged
+  m_TagString: Barn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2579,7 +2579,7 @@ GameObject:
   - component: {fileID: 2120429934}
   m_Layer: 0
   m_Name: BarnRight
-  m_TagString: Untagged
+  m_TagString: Barn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
