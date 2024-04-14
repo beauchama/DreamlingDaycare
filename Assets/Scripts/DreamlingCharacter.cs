@@ -124,7 +124,6 @@ public class DreamlingCharacter : MonoBehaviour
 
     public void Interact()
     {
-
         if (!isPickup && !GameManager.Instance.Player.GetComponentInChildren<DreamlingCharacter>())
         {
             Pickup();
