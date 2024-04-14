@@ -10,6 +10,7 @@ public class InteractableBehaviour : MonoBehaviour
     public bool alwaysInteractable;
     public GameObject HoverText;
     public UnityEvent OnInteract;
+    public UnityEvent OnInteractFailed;
 
     private static readonly List<InteractableBehaviour> Interactables = new();
 
@@ -36,13 +37,19 @@ public class InteractableBehaviour : MonoBehaviour
             .OrderBy(i => Vector2.Distance(playerPosition, i.transform.position))
             .FirstOrDefault();
 
-        if ((alwaysInteractable || closestInteractable == this)
-            && Vector2.Distance(playerPosition, transform.position) < InteractableDistance)
+        if (Vector2.Distance(playerPosition, transform.position) < InteractableDistance)
         {
             ShowInteractText(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-                OnInteract.Invoke();
+                if (alwaysInteractable || closestInteractable == this)
+                {
+                    OnInteract.Invoke();
+                }
+                else
+                {
+                    OnInteractFailed.Invoke();
+                }
             }
         }
         else

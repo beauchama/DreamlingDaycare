@@ -26,6 +26,10 @@ public class Mailbox : MonoBehaviour
             Destroy(dreamling.gameObject);
             PlayerManager.Instance.CarriedDreamling = null;
         }
+        else
+        {
+            GameManager.Instance.errorMessageDisplay.DisplayError("You need to carry a Dreamling to sell it!");
+        }
     }
 
     private void Update()

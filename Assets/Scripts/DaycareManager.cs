@@ -23,8 +23,12 @@ public class DaycareManager : MonoBehaviour
     public void Explore()
     {
         var randomSceneIndex = UnityEngine.Random.Range(0, Scenes.Length);
-
         SceneTransitionManager.Instance.ChangeScene(Scenes[randomSceneIndex]);
+    }
+
+    public void ExploreFailed()
+    {
+        GameManager.Instance.errorMessageDisplay.DisplayError("You can't explore while carrying a Dreamling!");
     }
 
     private void SpawnBarnDreamlings()

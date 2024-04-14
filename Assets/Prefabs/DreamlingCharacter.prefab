@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractableDistance: 1
+  alwaysInteractable: 0
   HoverText: {fileID: 0}
   OnInteract:
     m_PersistentCalls:
@@ -176,6 +177,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnInteractFailed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &-1860098574321503981
 Rigidbody2D:
   serializedVersion: 4
