@@ -8,6 +8,7 @@ public class MainMenuManager : MonoBehaviour
         {
             Destroy(GameManager.Instance.gameObject);
             GameManager.Instance = null;
+            PlayerManager.Instance = null;
         }
     }
 
