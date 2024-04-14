@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public Inventory Inventory = new Inventory();
     public GameOverManager gameOverManager;
     public Score score;
+    public ErrorMessage errorMessageDisplay;
     public int currentBarnIndex = -1;
 
     public readonly List<Barn> Barns = new(3)
@@ -72,12 +73,21 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(currentScene.name);
     }
 
-    public void AddDreamlingToBarn(Dreamling dreamling)
+    public bool AddDreamlingToBarn(Dreamling dreamling)
     {
-        if (Barns.Count > currentBarnIndex && currentBarnIndex >= 0)
+        // If it's not a valid barn index, don't add the dreamling.
+        if (Barns.Count <= currentBarnIndex || currentBarnIndex < 0)
+            return true;
+
+        var errorMessage = Barns[currentBarnIndex].AddDreamling(dreamling);
+
+        if (errorMessage is not null)
         {
-            Barns[currentBarnIndex].AddDreamling(dreamling);
+            errorMessageDisplay?.DisplayError(errorMessage);
+            return false;
         }
+
+        return true;
     }
 
     public void RemoveDreamlingFromBarn(Dreamling dreamling)

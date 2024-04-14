@@ -165,6 +165,10 @@ public class DreamlingCharacter : MonoBehaviour
 
     private void Drop()
     {
+        var success = GameManager.Instance.AddDreamlingToBarn(dreamling);
+        if (!success)
+            return;
+
         isPickup = false;
 
         MoveTween.Kill();
@@ -175,8 +179,6 @@ public class DreamlingCharacter : MonoBehaviour
         GetComponent<InteractableBehaviour>().enabled = true;
 
         PlayerManager.Instance.CarriedDreamling = null;
-
-        GameManager.Instance.AddDreamlingToBarn(dreamling);
     }
 
     private void SetDreamlingStats()

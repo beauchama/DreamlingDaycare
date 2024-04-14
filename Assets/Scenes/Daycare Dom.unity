@@ -565,6 +565,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &407345124 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7583383885753830535, guid: 619997af1357df64495263e25f4a4508, type: 3}
+  m_PrefabInstance: {fileID: 5252612696486125267}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7920b9345e6ed1341aff9486c9434832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &435100643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2666,6 +2677,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3683383293884007546, guid: 619997af1357df64495263e25f4a4508, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416654118768508407, guid: 619997af1357df64495263e25f4a4508, type: 3}
+      propertyPath: errorMessageDisplay
+      value: 
+      objectReference: {fileID: 407345124}
     - target: {fileID: 4888051281790530449, guid: 619997af1357df64495263e25f4a4508, type: 3}
       propertyPath: m_LocalPosition.x
       value: 625.0223
