@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractableDistance: 1
+  alwaysInteractable: 1
   HoverText: {fileID: 5142330243682201013}
   OnInteract:
     m_PersistentCalls:
@@ -155,6 +156,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnInteractFailed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6287980825194256170
 MonoBehaviour:
   m_ObjectHideFlags: 0
