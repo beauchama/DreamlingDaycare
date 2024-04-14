@@ -5,6 +5,7 @@ using System.Linq;
 using Dreamlings.Interfaces;
 using TMPro;
 using UnityEngine;
+using UnityEngine.U2D;
 
 public class DreamlingCharacter : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class DreamlingCharacter : MonoBehaviour
     private Vector3 targetPosition;
     private Canvas statContainer;
     private Tween MoveTween;
+    private SpriteRenderer spriteRenderer;
 
     public float InteractableDistance = 1f;
     public float moveSpeed = 1f;
@@ -35,7 +37,9 @@ public class DreamlingCharacter : MonoBehaviour
         if (OverriddenDreamling != null)
         {
             dreamling = OverriddenDreamling;
-            GetComponent<SpriteRenderer>().sprite = Sprites[(int)dreamling.DreamlingType];
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = Sprites[(int)dreamling.DreamlingType];
+
             SetDreamlingStats();
 
             if (OverrideCarry)
@@ -53,16 +57,18 @@ public class DreamlingCharacter : MonoBehaviour
             return;
         }
 
-        var dreamlingType = Random.Range(0, 2);
-
-        dreamling = new Dreamling
+        if (dreamling == null)
         {
-            Name = DreamlingNameGenerator.Generate(),
-            NeededFood = NeededFoodGenerator.Generate(),
-            DreamlingType = (DreamlingType)dreamlingType,
-        };
+            dreamling = new Dreamling
+            {
+                Name = DreamlingNameGenerator.Generate(),
+                NeededFood = NeededFoodGenerator.Generate(),
+                DreamlingType = DreamlingTypeGenerator.Generate(),
+            };
 
-        GetComponent<SpriteRenderer>().sprite = Sprites[dreamlingType];
+            GetComponent<SpriteRenderer>().sprite = Sprites[(int)dreamling.DreamlingType];
+        }
+
         SetRandomTargetPosition();
         SetDreamlingStats();
     }
@@ -137,6 +143,7 @@ public class DreamlingCharacter : MonoBehaviour
                 Instantiate(Baby, GameManager.Instance.Player.transform.position, Quaternion.identity);
                 Baby.transform.DOScale(1f, 0.5f);
 
+                baby.DreamlingType = GetDreamlingType(dreamling.DreamlingType, dreamlingToBreed.DreamlingType);
                 Baby.GetComponent<DreamlingCharacter>().SetBaby(baby);
             }
         }
@@ -201,6 +208,12 @@ public class DreamlingCharacter : MonoBehaviour
     public void SetBaby(Dreamling newBorn)
     {
         dreamling = newBorn;
+        spriteRenderer.sprite = Sprites[(int)dreamling.DreamlingType];
         SetDreamlingStats();
+    }
+
+    public DreamlingType GetDreamlingType(DreamlingType left, DreamlingType right)
+    {
+        return left == right ? left : Random.Range(0, 2) == 0 ? left : right;
     }
 }
