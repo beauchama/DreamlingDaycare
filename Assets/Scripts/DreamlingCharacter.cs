@@ -5,7 +5,6 @@ using System.Linq;
 using Dreamlings.Interfaces;
 using TMPro;
 using UnityEngine;
-using UnityEngine.U2D;
 
 public class DreamlingCharacter : MonoBehaviour
 {
