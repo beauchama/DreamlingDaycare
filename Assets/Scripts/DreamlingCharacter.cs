@@ -41,7 +41,10 @@ public class DreamlingCharacter : MonoBehaviour
             dreamling = OverriddenDreamling;
             //spriteRenderer = GetComponent<SpriteRenderer>();
             //spriteRenderer.sprite = Sprites[(int)dreamling.DreamlingType];
-            Prefabs[(int)dreamling.DreamlingType].SetActive(true);
+            for (int i = 0; i < Prefabs.Length; i++)
+            {
+                Prefabs[i].SetActive(i == (int)dreamling.DreamlingType);
+            }
 
             SetDreamlingStats();
 
@@ -70,7 +73,10 @@ public class DreamlingCharacter : MonoBehaviour
             };
 
             //GetComponent<SpriteRenderer>().sprite = Sprites[(int)dreamling.DreamlingType];
-            Prefabs[(int)dreamling.DreamlingType].SetActive(true);
+            for (int i = 0; i < Prefabs.Length; i++)
+            {
+                Prefabs[i].SetActive(i == (int)dreamling.DreamlingType);
+            }
         }
 
         SetRandomTargetPosition();
@@ -237,7 +243,10 @@ public class DreamlingCharacter : MonoBehaviour
         dreamling = newBorn;
         //spriteRenderer ??= GetComponent<SpriteRenderer>();
         //spriteRenderer.sprite = Sprites[(int)dreamling.DreamlingType];
-        Prefabs[(int)dreamling.DreamlingType].SetActive(true);
+        for (int i = 0; i < Prefabs.Length; i++)
+        {
+            Prefabs[i].SetActive(i == (int)dreamling.DreamlingType);
+        }
     }
 
     private DreamlingType GetDreamlingType(DreamlingType left, DreamlingType right)
