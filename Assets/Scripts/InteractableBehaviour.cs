@@ -31,6 +31,9 @@ public class InteractableBehaviour : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.gameIsOver)
+            return;
+
         var playerPosition = GameManager.Instance.Player.transform.position;
         var closestInteractable = Interactables
             .Where(i => !i.alwaysInteractable)
