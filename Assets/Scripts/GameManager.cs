@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public Score score;
     public ErrorMessage errorMessageDisplay;
     public int currentBarnIndex = -1;
+    public int LastSceneIndex = -1;
 
     public readonly List<Barn> Barns = new(3)
     {

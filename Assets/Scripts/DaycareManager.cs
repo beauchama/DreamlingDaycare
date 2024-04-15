@@ -45,8 +45,15 @@ public class DaycareManager : MonoBehaviour
         }
 
         PlayerManager.Instance.IsExploring = true;
-        var randomSceneIndex = UnityEngine.Random.Range(0, Scenes.Length);
-        SceneTransitionManager.Instance.ChangeScene(Scenes[randomSceneIndex]);
+
+        int index = GameManager.Instance.LastSceneIndex;
+        while (index == GameManager.Instance.LastSceneIndex)
+        {
+            index = UnityEngine.Random.Range(0, Scenes.Length);
+        }
+
+        GameManager.Instance.LastSceneIndex = index;
+        SceneTransitionManager.Instance.ChangeScene(Scenes[index]);
     }
 
     public void ExploreFailed()
