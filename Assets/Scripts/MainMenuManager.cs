@@ -42,6 +42,7 @@ public class MainMenuManager : MonoBehaviour
             {
                 index = Random.Range(0, Prefabs.Length);
             }
+
             lastIndex = index;
 
             bool isGoingRight = Random.Range(0, 2) > 0;
