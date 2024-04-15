@@ -47,10 +47,11 @@ public class GameManager : MonoBehaviour
         if (gameIsOver)
             return;
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ReloadCurrentScene();
-        }
+        // Dev only, you don't get to use that, haha
+        // if (Input.GetKeyDown(KeyCode.R))
+        // {
+        //     ReloadCurrentScene();
+        // }
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
