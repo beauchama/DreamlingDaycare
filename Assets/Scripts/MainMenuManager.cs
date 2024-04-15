@@ -6,9 +6,7 @@ public class MainMenuManager : MonoBehaviour
     {
         if (GameManager.Instance)
         {
-            Destroy(GameManager.Instance.gameObject);
-            GameManager.Instance = null;
-            PlayerManager.Instance = null;
+            GameManager.Instance.ResetGame();
         }
     }
 

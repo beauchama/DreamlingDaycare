@@ -24,13 +24,18 @@ public class GameOverManager : MonoBehaviour
 
     public void RestartGame()
     {
-        Time.timeScale = 1;
-        SceneTransitionManager.Instance.ChangeScene("Daycare");
+        ExitToScene("Daycare");
     }
 
     public void MainMenu()
     {
+        ExitToScene("MainMenu");
+    }
+
+    private void ExitToScene(string sceneName)
+    {
+        GameManager.Instance?.ResetGame();
         Time.timeScale = 1;
-        SceneTransitionManager.Instance.ChangeScene("MainMenu");
+        SceneTransitionManager.Instance.ChangeScene(sceneName);
     }
 }

@@ -3,7 +3,6 @@ using System.Linq;
 using Daycare;
 using Dreamlings.Characters;
 using Dreamlings.Explorations;
-using Dreamlings.Interfaces;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -153,14 +152,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Todo : remove the things below
-    public void AddMeat()
+    public void ResetGame()
     {
-        Inventory.AddFood(NeededFood.Meat);
-    }
-
-    public void RemoveMeat()
-    {
-        Inventory.RemoveFood(NeededFood.Meat);
+        Destroy(Instance.gameObject);
+        Instance = null;
+        PlayerManager.Instance = null;
     }
 }
