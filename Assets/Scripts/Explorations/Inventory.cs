@@ -11,7 +11,7 @@ namespace Dreamlings.Explorations
 
         private int Meats { get; set; }
 
-        private int Legumes { get; set; }
+        private int Veggies { get; set; }
 
         private int Fishes { get; set; }
 
@@ -23,7 +23,7 @@ namespace Dreamlings.Explorations
             {
                 NeededFood.Plant => Plants > 0,
                 NeededFood.Meat => Meats > 0,
-                NeededFood.Legume => Legumes > 0,
+                NeededFood.Veggies => Veggies > 0,
                 NeededFood.Fish => Fishes > 0,
                 NeededFood.Flower => Flowers > 0,
                 _ => false,
@@ -40,8 +40,8 @@ namespace Dreamlings.Explorations
                 case NeededFood.Meat:
                     Meats--;
                     break;
-                case NeededFood.Legume:
-                    Legumes--;
+                case NeededFood.Veggies:
+                    Veggies--;
                     break;
                 case NeededFood.Fish:
                     Fishes--;
@@ -64,8 +64,8 @@ namespace Dreamlings.Explorations
                 case NeededFood.Meat:
                     Meats++;
                     break;
-                case NeededFood.Legume:
-                    Legumes++;
+                case NeededFood.Veggies:
+                    Veggies++;
                     break;
                 case NeededFood.Fish:
                     Fishes++;
@@ -85,7 +85,7 @@ namespace Dreamlings.Explorations
         {
             Plants -= inventory.Plants;
             Meats -= inventory.Meats;
-            Legumes -= inventory.Legumes;
+            Veggies -= inventory.Veggies;
             Fishes -= inventory.Fishes;
             Flowers -= inventory.Flowers;
 
@@ -103,7 +103,7 @@ namespace Dreamlings.Explorations
             var textBoxes = uiObject.GetComponentsInChildren<TextMeshProUGUI>();
             textBoxes.Single(x => x.name == "QtyPlants").text = Plants.ToString();
             textBoxes.Single(x => x.name == "QtyMeat").text = Meats.ToString();
-            textBoxes.Single(x => x.name == "QtyVeggies").text = Legumes.ToString();
+            textBoxes.Single(x => x.name == "QtyVeggies").text = Veggies.ToString();
             textBoxes.Single(x => x.name == "QtyFish").text = Fishes.ToString();
             textBoxes.Single(x => x.name == "QtyFlowers").text = Flowers.ToString();
         }
