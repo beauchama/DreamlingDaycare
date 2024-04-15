@@ -60,6 +60,7 @@ public class IntroManager : MonoBehaviour
         yield return DisplayBubble(boudichonBubble, "Someone should really build a place for abandonned summons...", 3f);
         EndIntro();
     }
+
     public void EndIntro()
     {
         GetComponent<AudioSource>().DOFade(0, 0.4f);
