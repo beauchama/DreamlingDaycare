@@ -5,6 +5,7 @@ using System.Linq;
 using Dreamlings.Interfaces;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class DreamlingCharacter : MonoBehaviour
 {
@@ -52,7 +53,8 @@ public class DreamlingCharacter : MonoBehaviour
             {
                 isPickup = true;
 
-                transform.DOScale(0.5f, 0f);
+                transform.DOScale(0.75f, 0f);
+                GetComponentInChildren<SortingGroup>().sortingOrder = 11;
                 transform.parent = GameManager.Instance.Player.transform;
 
                 transform.DOLocalMove(new Vector3(0.5f, 0.5f, 0f), 0f);
@@ -161,7 +163,7 @@ public class DreamlingCharacter : MonoBehaviour
         isPickup = true;
 
         GetComponent<Rigidbody2D>().simulated = false;
-        GetComponent<SpriteRenderer>().sortingOrder = 11;
+        GetComponentInChildren<SortingGroup>().sortingOrder = 11;
         transform.DOScale(0.75f, 0.5f);
         transform.parent = GameManager.Instance.Player.transform;
 
@@ -183,7 +185,7 @@ public class DreamlingCharacter : MonoBehaviour
 
         MoveTween.Kill();
         GetComponent<Rigidbody2D>().simulated = true;
-        GetComponent<SpriteRenderer>().sortingOrder = 5;
+        GetComponentInChildren<SortingGroup>().sortingOrder = 5;
         transform.DOScale(1f, 0.5f);
         transform.parent = null;
         GetComponent<InteractableBehaviour>().enabled = true;

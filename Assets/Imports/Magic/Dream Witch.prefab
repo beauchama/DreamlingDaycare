@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1174482518600786409}
+  - component: {fileID: 403760135679379314}
   m_Layer: 0
   m_Name: Dream Witch
   m_TagString: Untagged
@@ -32,6 +33,18 @@ Transform:
   - {fileID: 5148905463048852938}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &403760135679379314
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5619126679028223428}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_SortAtRoot: 1
 --- !u!1001 &5790292346806316052
 PrefabInstance:
   m_ObjectHideFlags: 0
