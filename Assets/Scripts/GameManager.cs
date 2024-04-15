@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public ErrorMessage errorMessageDisplay;
     public int currentBarnIndex = -1;
     public int LastSceneIndex = -1;
+    public bool gameIsOver;
 
     public readonly List<Barn> Barns = new(3)
     {
@@ -38,10 +39,14 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         Player = GameObject.FindGameObjectWithTag("Player");
         score = GetComponent<Score>();
+        gameIsOver = false;
     }
 
     private void Update()
     {
+        if (gameIsOver)
+            return;
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             ReloadCurrentScene();
@@ -63,6 +68,8 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Over!");
         if (gameOverManager is not null)
         {
+            Player.SetActive(false);
+            gameIsOver = true;
             gameOverManager.DisplayGameOver(score.scoreText.text);
         }
     }

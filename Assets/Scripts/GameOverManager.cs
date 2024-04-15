@@ -18,7 +18,7 @@ public class GameOverManager : MonoBehaviour
     {
         gameOverCanvasGroup.interactable = true;
         gameOverCanvasGroup.blocksRaycasts = true;
-        scoreText.text = $"You managed to make ${score} !";
+        scoreText.text = $"You managed to make ${score}";
         gameOverCanvasGroup.DOFade(1, 0.25f).SetUpdate(true);
     }
 
