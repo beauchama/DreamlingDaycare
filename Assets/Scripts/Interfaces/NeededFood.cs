@@ -6,6 +6,6 @@
         Meat,
         Fish,
         Flower,
-        Legume
+        Veggies
     }
 }
