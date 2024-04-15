@@ -26,6 +26,12 @@ public class MainMenuManager : MonoBehaviour
         SceneTransitionManager.Instance.ChangeScene("Daycare");
     }
 
+    public void Tutorial()
+    {
+        StopCoroutine(MenuAnimationRoutine);
+        SceneTransitionManager.Instance.ChangeScene("Tutorial");
+    }
+
     public void QuitGame()
     {
         Application.Quit();

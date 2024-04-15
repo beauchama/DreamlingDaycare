@@ -26,5 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forest.unity
     guid: 7d0fdb5ca6cfa5a4e82de0507658611f
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: cfb5ab268dc4b2e438d72c1a406522a4
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
