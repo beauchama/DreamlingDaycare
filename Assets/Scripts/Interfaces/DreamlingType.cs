@@ -4,7 +4,7 @@
     {
         Derpy,
         Magic,
-        //Bat,
-        //Fox
+        Bat,
+        Fox
     }
 }

@@ -20,6 +20,7 @@ public class DreamlingCharacter : MonoBehaviour
     public float moveSpeed = 1f;
     public float changeInterval = 2f;
     public Sprite[] Sprites;
+    public GameObject[] Prefabs;
     public GameObject Baby;
     public BreedTimer BreedTimer;
 
@@ -38,8 +39,9 @@ public class DreamlingCharacter : MonoBehaviour
         if (OverriddenDreamling != null)
         {
             dreamling = OverriddenDreamling;
-            spriteRenderer = GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = Sprites[(int)dreamling.DreamlingType];
+            //spriteRenderer = GetComponent<SpriteRenderer>();
+            //spriteRenderer.sprite = Sprites[(int)dreamling.DreamlingType];
+            Prefabs[(int)dreamling.DreamlingType].SetActive(true);
 
             SetDreamlingStats();
 
@@ -67,7 +69,8 @@ public class DreamlingCharacter : MonoBehaviour
                 DreamlingType = DreamlingTypeGenerator.Generate(),
             };
 
-            GetComponent<SpriteRenderer>().sprite = Sprites[(int)dreamling.DreamlingType];
+            //GetComponent<SpriteRenderer>().sprite = Sprites[(int)dreamling.DreamlingType];
+            Prefabs[(int)dreamling.DreamlingType].SetActive(true);
         }
 
         SetRandomTargetPosition();
@@ -153,7 +156,7 @@ public class DreamlingCharacter : MonoBehaviour
 
         GetComponent<Rigidbody2D>().simulated = false;
         GetComponent<SpriteRenderer>().sortingOrder = 11;
-        transform.DOScale(0.5f, 0.5f);
+        transform.DOScale(0.75f, 0.5f);
         transform.parent = GameManager.Instance.Player.transform;
 
         MoveTween = transform.DOLocalMove(new Vector3(0.5f, 0.5f, 0f), 0.5f);
@@ -232,8 +235,9 @@ public class DreamlingCharacter : MonoBehaviour
     private void SetBaby(Dreamling newBorn)
     {
         dreamling = newBorn;
-        spriteRenderer ??= GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = Sprites[(int)dreamling.DreamlingType];
+        //spriteRenderer ??= GetComponent<SpriteRenderer>();
+        //spriteRenderer.sprite = Sprites[(int)dreamling.DreamlingType];
+        Prefabs[(int)dreamling.DreamlingType].SetActive(true);
     }
 
     private DreamlingType GetDreamlingType(DreamlingType left, DreamlingType right)
