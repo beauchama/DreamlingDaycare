@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FixedCameras : MonoBehaviour
 {
@@ -8,8 +9,8 @@ public class FixedCameras : MonoBehaviour
     private void Awake()
     {
         lastScreenSize = new Vector2(Screen.width, Screen.height);
-        FixRatio();
-        //SceneManager.sceneLoaded += (x, y) => FixRatio();
+        //FixRatio();
+        SceneManager.sceneLoaded += (x, y) => FixRatio();
         DontDestroyOnLoad(gameObject);
     }
 
