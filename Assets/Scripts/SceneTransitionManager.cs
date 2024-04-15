@@ -26,6 +26,7 @@ public class SceneTransitionManager : MonoBehaviour
     {
         canvasGroup.alpha = 1;
         FadeToClear();
+        SceneManager.sceneUnloaded += (x) => FadeToClear();
     }
 
     public void ChangeScene(string sceneName)
