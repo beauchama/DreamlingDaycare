@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -20,13 +21,8 @@ public class SceneTransitionManager : MonoBehaviour
         }
 
         Instance = this;
-    }
-
-    private void Start()
-    {
-        canvasGroup.alpha = 1;
-        FadeToClear();
-        SceneManager.sceneUnloaded += (x) => FadeToClear();
+        DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += (x, y) => FadeToClear();
     }
 
     public void ChangeScene(string sceneName)
@@ -45,6 +41,7 @@ public class SceneTransitionManager : MonoBehaviour
 
     private Tween FadeToClear()
     {
-        return canvasGroup.DOFade(0, 2 * FADE_DURATION).SetUpdate(true);
+        canvasGroup.alpha = 1;
+        return canvasGroup.DOFade(0, 2 * FADE_DURATION);
     }
 }
