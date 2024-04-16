@@ -34,6 +34,7 @@ public class ExplorationManager : MonoBehaviour
 
     public void ResetLevel()
     {
+        PlayerManager.Instance.CarriedDreamling = null;
         GameManager.Instance.Inventory.RemoveInventory(Inventory);
         GameManager.Instance.ReloadCurrentScene();
     }
