@@ -54,7 +54,7 @@ public class DreamlingCharacter : MonoBehaviour
                 isPickup = true;
 
                 transform.DOScale(0.75f, 0f);
-                GetComponentInChildren<SortingGroup>().sortingOrder = 11;
+                ChangeSortOrder(11);
                 transform.parent = GameManager.Instance.Player.transform;
 
                 transform.DOLocalMove(new Vector3(0.5f, 0.5f, 0f), 0f);
@@ -158,12 +158,29 @@ public class DreamlingCharacter : MonoBehaviour
         }
     }
 
+    private void ChangeSortOrder(int order)
+    {
+        foreach(GameObject prefab in Prefabs)
+        {
+            var sr = prefab.GetComponent<SpriteRenderer>();
+            var sg = prefab.GetComponent<SortingGroup>();
+            if (sr)
+            {
+                sr.sortingOrder = order;
+            }
+            if (sg)
+            {
+                sg.sortingOrder = order;
+            }
+        }
+    }
+
     private void Pickup()
     {
         isPickup = true;
 
         GetComponent<Rigidbody2D>().simulated = false;
-        GetComponentInChildren<SortingGroup>().sortingOrder = 11;
+        ChangeSortOrder(11);
         transform.DOScale(0.75f, 0.5f);
         transform.parent = GameManager.Instance.Player.transform;
 
@@ -185,7 +202,7 @@ public class DreamlingCharacter : MonoBehaviour
 
         MoveTween.Kill();
         GetComponent<Rigidbody2D>().simulated = true;
-        GetComponentInChildren<SortingGroup>().sortingOrder = 5;
+        ChangeSortOrder(5);
         transform.DOScale(1f, 0.5f);
         transform.parent = null;
         GetComponent<InteractableBehaviour>().enabled = true;
